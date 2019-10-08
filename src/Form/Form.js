@@ -23,12 +23,12 @@ export default class Form extends Component {
   };
 
   resetInputs = () => {
-    console.log('reset inputs firing')
     this.setState({
       name: '',
       quote: '',
       rank: ''
     });
+    console.log('state after', this.state)
   };
 
  
@@ -49,6 +49,12 @@ export default class Form extends Component {
           name="quote"
           onChange={ this.handleChange}
           />
+        <select name="rank" value={this.state.rank} onChange={this.handleChange}>
+          <option defaultValue="rank">Rank</option>
+          <option name="rank" value="beginner">Beginner</option>
+          <option name="rank" value="intermediate">Intermediate</option>
+          <option name="rank" value="expert">Expert</option>
+        </select>
 
           
         
