@@ -10,8 +10,10 @@ export default class Form extends Component {
     };
   };
 
-  handleChange = () => {
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value})
     console.log('handle change firing')
+    console.log(this.state)
   }
 
   submitUserInfo = (e) => {
@@ -28,6 +30,7 @@ export default class Form extends Component {
       rank: ''
     });
   };
+
  
   render() {
     return(
@@ -39,7 +42,15 @@ export default class Form extends Component {
           name="name"
           onChange={ this.handleChange }
           />
-        <input type="text" placeholder="Enter Favorite Star Wars Quote"></input>
+        <input 
+          type="text" 
+          placeholder="Enter Favorite Star Wars Quote"
+          value={ this.state.quote }
+          name="quote"
+          onChange={ this.handleChange}
+          />
+
+          
         
         <button onClick={this.submitUserInfo}>Submit</button>
       </form>
