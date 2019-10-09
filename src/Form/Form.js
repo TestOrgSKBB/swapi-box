@@ -25,6 +25,7 @@ export default class Form extends Component {
 
   submitUserInfo = (e) => {
     e.preventDefault();
+    //pass info to app that will pass it to component that renders user info
     this.resetInputs()
   };
 
