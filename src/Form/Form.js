@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import './Form.scss'
 
 export default class Form extends Component {
   constructor() {
@@ -13,21 +14,17 @@ export default class Form extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value})
-    console.log('handle change firing')
-    console.log(this.state)
   };
 
   enableSubmitBtn = (e) => {
-
     if($('.form__input').val.length > 0 ) {
       $('.form__button').prop('disabled', false)
     }
     this.handleChange(e)
-  }
+  };
 
   submitUserInfo = (e) => {
     e.preventDefault();
-    console.log('submit info firing')
     this.resetInputs()
   };
 
@@ -37,15 +34,14 @@ export default class Form extends Component {
       quote: '',
       rank: ''
     });
-    console.log('state after', this.state)
   };
 
- 
   render() {
     return(
+      <div id="form__div--container">
       <form>
         <input 
-          className="form__input1"
+          className="form__element form__input"
           type="text" 
           placeholder="Enter Name"
           value={ this.state.name }
@@ -53,25 +49,22 @@ export default class Form extends Component {
           onChange={ this.handleChange }
           />
         <input 
-          className="from__input"
+          className="form__element from__input"
           type="text" 
           placeholder="Enter Favorite Star Wars Quote"
           value={ this.state.quote }
           name="quote"
           onChange={ this.handleChange}
           />
-        <select name="rank" value={this.state.rank} onChange={this.enableSubmitBtn}>
+        <select className="form__element" name="rank" value={this.state.rank} onChange={this.enableSubmitBtn}>
           <option defaultValue="rank">Rank</option>
           <option name="rank" value="beginner">Beginner</option>
           <option name="rank" value="intermediate">Intermediate</option>
           <option name="rank" value="expert">Expert</option>
         </select>
-        <button className="form__button" disabled onClick={this.submitUserInfo}>Submit</button>
+        <button className="form__element form__button" disabled onClick={this.submitUserInfo}>Submit</button>
       </form>
+      </div>
     )
   };
-
-
-  
-
-}
+};

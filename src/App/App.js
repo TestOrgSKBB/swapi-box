@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Form from '../Form/Form';
-import './App.css';
+import './App.scss'
 import { format } from 'url';
 
 export default class App extends Component {
+
 
 
 
@@ -16,4 +17,6 @@ export default class App extends Component {
   }
 
 }
+
+
 
