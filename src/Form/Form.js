@@ -63,7 +63,8 @@ export default class Form extends Component {
           <option name="rank" value="intermediate">Intermediate</option>
           <option name="rank" value="expert">Expert</option>
         </select>
-        <button className="form__element form__button" disabled onClick={this.submitUserInfo}>Submit</button>
+        <button className="form__element form__button" title="Fill out each input to continue" disabled onClick={this.submitUserInfo}>Submit</button>
+        
       </form>
       </div>
     )
