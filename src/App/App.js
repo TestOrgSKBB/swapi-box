@@ -23,7 +23,7 @@ export default class App extends Component {
     <body>
         <main>
         <Route exact path='/' component={Form} />
-        </main> */}
+        </main>}
 
       </body>
     )
