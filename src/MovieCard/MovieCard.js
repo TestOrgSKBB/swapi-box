@@ -3,7 +3,6 @@ import React from 'react';
 
 const MovieCard = () => {
 
-
   return (
     <section>
       <h2>Title</h2>
