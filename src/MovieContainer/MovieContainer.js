@@ -1,30 +1,29 @@
 import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
 
-const MovieContainer = ({movies}) => {
-  const movieData = movies.map(movie => {
-    return (<MovieCard 
-      id={movie.episode_id}
-      title= {movie.title}
-      episode={movie.episode_id}
-      year={movie.release_date}
-      />
-    )
+const MovieContainer = ( props ) => {
+  const displayMovies = props.movies.map( movie => {
+    const {title , episode_id, release_date } = movie;
+    return <MovieCard title={title} episode_id={episode_id} release_date={release_date} />
   });
 
-  
-    return (
-      <main>
-        <header>
-          <h1>
-           Episodes
-        </h1>
-        </header>
-        { movieData }
-     </main>
-    )
-  }
-  
+
+  // const movieKeys = Object.keys(movies);
+  // const displayMovies = movieKeys.map(movie => {
+  //   const title = movies[movie].title;
+  //   const episode_id = movies[movie].episode_id;
+  //   const release_date = movies[movie].release_date;
+  //   console.log(displayMovies);
+  //   return <MovieCard title={title} episode_id={episode_id} release_date={release_date} />
+  // });
+
+  return (
+    <>
+      <h1>Movies</h1>
+      {displayMovies}
+    </>
+  )
+ }  
 
 
 export default MovieContainer;
