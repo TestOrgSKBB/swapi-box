@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import Form from '../Form/Form';
 import './App.scss'
 import { format } from 'url';
-import { BrowswerRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
+import CharacterContainer from '../CharacterContainer/CharacterContainer'
+import MovieContainer from '../MovieContainer/MovieContainer'
 
 export default class App extends Component {
-
-
+  constructor() {
+    super()
+    this.state= {
+      movies: [],
+      characters: []
+    }
+  }
 
 
 
@@ -14,10 +21,9 @@ export default class App extends Component {
     return (
       <Router>
         <Route exact path='/' component={Form} />
-           <main className="App">
-           <h1>SWAPI-Trivia</h1>
-        
-      </main>
+        { this.state.movies && <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies}/>}/>
+        }
+        {this.state.characters && <Route exact path='/movies/1' render={() => <CharacterContainer characters={this.state.characters}/>}/>}
       </Router>
     )
   }
