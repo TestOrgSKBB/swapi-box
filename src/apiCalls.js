@@ -1,32 +1,32 @@
-export const fetchData = (movieUrls) => {
-  return fetch(movieUrls)
+export const fetchData = () => {
+  return fetch('https://swapi.co/api/films/')
     .then(data => data.json())
     .then(movies => {
       const movieData = movies.results.map(movie => {
         const { characters, opening_crawl, release_date, title } = movie;
-        return fetchCharacters(characters)
+        return fetchCharacterData(characters)
           .then(characters => ({title, release_date, opening_crawl, characters}))
       })
       return Promise.all(movieData);
     })
   }
 
-const fetchCharacters = (characters) => {
+const fetchCharacterData = (characters) => {
   const charactersData = characters.map(character => {
     return fetch(character)
     .then(data => data.json())
-    .then(character => {
-      const { films, homeworld, name, species } = character;
+    .then(characterData => {
+      const { films, homeworld, name, species } = characterData;
       return fetchMovies(films)
         .then(films => ({name, films, species, homeworld}));
     })
-    .then(character => {
-      const { films, homeworld, name, species } = character;
+    .then(characterData => {
+      const { films, homeworld, name, species } = characterData;
       return fetchHomeworld(homeworld)
         .then(homeworld => ({name, films, species, homeworld}));
     })
-    .then(character => {
-      const {films, homeworld, name, species } = character
+    .then(characterData => {
+      const {films, homeworld, name, species } = characterData
       return fetchSpecies(species)
         .then(species => ({ name, films, species, homeworld }));
     })

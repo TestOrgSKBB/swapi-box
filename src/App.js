@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    fetchData('https://swapi.co/api/films/')
+    fetchData()
     .then(data => {
       console.log(data);
       return data;
