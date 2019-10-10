@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import { fetchData } from './apiCalls'
+// import { fetchMovies } from './apiCalls'
+import { fetchData } from './apiCalls';
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      data: {},
+      movies: {},
     }
   }
 
   componentDidMount = () => {
-    const data = fetchData();
-    data.then(data => console.log(data));
+    fetchData('https://swapi.co/api/films/')
+    .then(data => {
+      console.log(data);
+      return data;
+    })
+    .then(movies => this.setState({ movies }))
+    .catch(error => console.log(error));
   }
   
   render() {
