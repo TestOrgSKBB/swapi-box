@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Route, NavLink } from 'react-router-dom'
+import MovieContainer from '../MovieContainer/MovieContainer'
 import $ from 'jquery';
 import './Form.scss'
 
@@ -63,10 +65,13 @@ export default class Form extends Component {
           <option name="rank" value="intermediate">Intermediate</option>
           <option name="rank" value="expert">Expert</option>
         </select>
+        <NavLink to='/MovieContainer'>
         <button className="form__element form__button" title="Fill out each input to continue" disabled onClick={this.submitUserInfo}>Submit</button>
-        
+        </NavLink>
       </form>
+      <Route exact path='/movies' component={MovieContainer} />
       </div>
     )
   };
 };
+
