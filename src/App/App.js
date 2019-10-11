@@ -14,8 +14,10 @@ export default class App extends Component {
     super()
     this.state= {
       movies: [],
-      characters: [],
       isLoading: true,
+      name: '',
+      quote: '',
+      rank: '',
     }
   }
 
@@ -29,16 +31,20 @@ export default class App extends Component {
     .catch(error => console.log(error));
   }
 
+  updateState = (statesObj) => {
+    this.setState(statesObj);
+  }
+
   render() {
     return (
-    <body>
-        <main>
+      <main>
         {this.state.isLoading && <h1>Loading...</h1>}
-        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} />} />}
+        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies}
+           updateState={this.updateState} 
+          />} 
+        />}
         <Route path='/movies' render={() => <MovieContainer movies={this.state.movies} />} />
-        </main>
-
-      </body>
+      </main>
     )
   }
 } 
