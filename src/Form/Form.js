@@ -69,7 +69,6 @@ export default class Form extends Component {
         <button className="form__button" title="Fill out each input to continue" disabled onClick={this.submitUserInfo}>Submit</button>
         </NavLink>
       </form>
-      <Route exact path='/movies' render={() => <MovieContainer movies={this.props.movies} /> } />
       </div>
     )
   };
