@@ -10,8 +10,8 @@ const MovieCard = (props) => {
       <h2>{title}</h2>
       <h3>{episode_id}</h3>
       <h3>{release_date}</h3>
-      <NavLink className="movie__button--link" to='/movie:id'>
-      <button>View Characters</button>
+      <NavLink className="movie__button--link" to='/movies/3'>
+      <button value={props.episode} onClick={event => props.selectMovie(event.target.value)}>>View Characters</button>
       </NavLink>
     </section>
   );
