@@ -16,6 +16,7 @@ export default class App extends Component {
       movies: [],
       characters: [],
       isLoading: true,
+      movieSelected: null
     }
     console.log(this.state, 'state')
   }
@@ -32,9 +33,6 @@ export default class App extends Component {
     
   }
 
-  selectMovie = (id) => {
-    this.setState({ movieSelected: id })
-  }
 
   render() {
     return (
@@ -43,31 +41,18 @@ export default class App extends Component {
         {this.state.isLoading && <h1>Loading...</h1>}
         {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} />} />}
         <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies} selectMovie={this.selectMovie} />} />
-
- 
-        {this.state.characters &&
-          <Route
-            exact path='/movies/3'
-            render={() => <CharacterContainer characters={this.state.characters} />} />
-        }
-
-        {/* <Route exact path='/movies/:id/characters' render={({match}) => {
-          console.log(match)
+        <Route exact path='/movies/:id/characters' render={({match}) => {
+          console.log('match-->', match)
         const { id } = match.params
         console.log(this.state.movies, '<-----')
+        console.log('ID!', id)
         const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
           console.log('characters?', characters)
         return (<CharacterContainer characters={characters}/>)
-      }} /> */}
+      }} />
 
 
-        {/* <Route exact path='/:movie_id' render={({match}) =>  {
-          const { id } = match.params
-          console.log('movies in render-->', this.state.movies)
-          const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
-        return (<CharacterContainer characters={characters} />)
-      }}/>
-        {console.log(match)} */}
+
         </main>
 
       </body>
