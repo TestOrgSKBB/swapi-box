@@ -35,7 +35,8 @@ export default class App extends Component {
         <main>
         {this.state.isLoading && <h1>Loading...</h1>}
         {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} />} />}
-        <Route path='/movies' render={() => <MovieContainer movies={this.state.movies} />} />
+        <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies} />} />
+        <Route exact path='/movie:id' render={() => <CharacterContainer />}/>
         </main>
 
       </body>
