@@ -9,7 +9,6 @@ console.log('character props', props)
     <>
       <h1>Character!</h1>
       <h1>{character}</h1>
- 
     </>
   )
  }  

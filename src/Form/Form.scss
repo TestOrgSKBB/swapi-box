@@ -1,6 +1,7 @@
 form {
   display: flex;
   flex-direction: column;
+  border-radius: 3em;
 }
 
 .form__element {
@@ -10,7 +11,7 @@ form {
 }
 
 #form__div--container {
-  border: 2px solid #BFCAC3;
+  // border: 2px solid #BFCAC3;
   width: 60%;
   margin-left: 20%;
   margin-top: 6%;

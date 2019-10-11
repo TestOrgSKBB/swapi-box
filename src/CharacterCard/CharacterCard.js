@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 import './CharacterCard.scss'
 
 const Character = (props) => {
-  console.log(props)
   let { films, homeworld, name, species } = props.character
   if(species === undefined) {
     species = 'Species Unknown'
   }
-  console.log(films, 'FILMSSSS')
   let characterFilms = films.map(film => <p>{film.title}</p>)
 
   return (
@@ -22,6 +20,7 @@ const Character = (props) => {
         <h6>Featured Films:</h6>
         <h5>{characterFilms}</h5>
       </div>
+      <button>Favorite</button>
     </article>
   )
 }

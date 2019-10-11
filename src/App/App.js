@@ -18,7 +18,6 @@ export default class App extends Component {
       isLoading: true,
       movieSelected: null
     }
-    console.log(this.state, 'state')
   }
 
   componentDidMount = () => {
@@ -29,15 +28,13 @@ export default class App extends Component {
     })
     .then(movies => this.setState({ movies , isLoading: false}))
     .catch(error => console.log(error));
-    
-    
   }
-
 
   render() {
     return (
     <body>
         <main>
+        <h1 className="title">Star Wars: Trivia</h1>
           <NavLink to='/'>    
         <button>Sign Out</button>
           </NavLink>
@@ -45,21 +42,10 @@ export default class App extends Component {
         {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} />} />}
         <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies} selectMovie={this.selectMovie} />} />
         <Route exact path='/movies/:id/characters' render={({match}) => {
-          console.log('match-->', match)
         const { id } = match.params
-        console.log(this.state.movies, '<-----')
-        console.log('ID!', id)
         const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
-          console.log('characters?', characters)
         return (<CharacterContainer characters={characters}/>)
-        
-        
-        
-  // <Route exact path='/' render={() => <Form movie={this.state.movies}/>}/>
       }} />
-
-
-
         </main>
 
       </body>
