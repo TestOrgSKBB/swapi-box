@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieContainer should match the snapshot 1`] = `
+<Fragment>
+  <h1>
+    Movies
+  </h1>
+  <MovieCard
+    episode_id={4}
+    key="0"
+    release_date="1999/04/20"
+    title="Great Movie"
+  />
+  <MovieCard
+    episode_id={1}
+    key="1"
+    release_date="2050/01/01"
+    title="First Star Wars"
+  />
+</Fragment>
+`;
