@@ -38,6 +38,9 @@ export default class App extends Component {
     return (
     <body>
         <main>
+          <NavLink to='/'>    
+        <button>Sign Out</button>
+          </NavLink>
         {this.state.isLoading && <h1>Loading...</h1>}
         {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} />} />}
         <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies} selectMovie={this.selectMovie} />} />
@@ -49,6 +52,10 @@ export default class App extends Component {
         const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
           console.log('characters?', characters)
         return (<CharacterContainer characters={characters}/>)
+        
+        
+        
+  // <Route exact path='/' render={() => <Form movie={this.state.movies}/>}/>
       }} />
 
 
