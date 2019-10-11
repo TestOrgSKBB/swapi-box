@@ -13,8 +13,9 @@ export default class App extends Component {
   constructor() {
     super()
     this.state= {
-      movies: {},
-      characters: []
+      movies: [],
+      characters: [],
+      isLoading: true,
     }
   }
 
@@ -24,7 +25,7 @@ export default class App extends Component {
       console.log(data);
       return data;
     })
-    .then(movies => this.setState({ movies }))
+    .then(movies => this.setState({ movies , isLoading: false}))
     .catch(error => console.log(error));
   }
 
@@ -32,8 +33,10 @@ export default class App extends Component {
     return (
     <body>
         <main>
-        <Route exact path='/' component={Form} />
-        </main>}
+        {this.state.isLoading && <h1>Loading...</h1>}
+        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} />} />}
+        <Route path='/movies' render={() => <MovieContainer movies={this.state.movies} />} />
+        </main>
 
       </body>
     )

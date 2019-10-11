@@ -3,9 +3,9 @@ export const fetchData = () => {
     .then(data => data.json())
     .then(movies => {
       const movieData = movies.results.map(movie => {
-        const { characters, opening_crawl, release_date, title } = movie;
+        const { characters, opening_crawl, release_date, title, episode_id } = movie;
         return fetchCharacterData(characters)
-          .then(characters => ({title, release_date, opening_crawl, characters}))
+          .then(characters => ({title, release_date, opening_crawl, characters, episode_id}))
       })
       return Promise.all(movieData);
     })
