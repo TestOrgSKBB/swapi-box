@@ -1,3 +1,7 @@
+* {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
 main {
 background-image: 
 url('../images/star-wars-planets.jpg');
@@ -11,6 +15,7 @@ h1 {
   color: #BFCAC3;
   text-align: center;
   margin-top: 2%;
+ 
 }
 
 body {
@@ -18,13 +23,26 @@ body {
   // url('../images/jets.gif');
   url('../images/stars.gif');
     background-size: cover;
+}
 
-    
+.main__div {
+  display: flex;
+  justify-content: center;
+}
+
+.main__div--info {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   color: red;
 
+}
+
+.main__div {
+  height: 16vh;
+  background: rgba(51, 51, 51, .7)
 }
 
 .title:hover {
@@ -64,6 +82,5 @@ form {
   animation: neon4 1.5s ease-in-out infinite alternate;
   border-radius: 20px;
 }
-
 
 
