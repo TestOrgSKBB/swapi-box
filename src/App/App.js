@@ -16,8 +16,16 @@ export default class App extends Component {
       movies: [],
       characters: [],
       isLoading: true,
-      movieSelected: null
+      name: '',
+      quote: '',
+      rank:''
     }
+  }
+
+  setUser = (name, quote, rank)=> {
+    console.log(name, quote, rank)
+    this.setState({ name, quote, rank })
+    console.log('state', this.state)
   }
 
   componentDidMount = () => {
@@ -30,22 +38,31 @@ export default class App extends Component {
     .catch(error => console.log(error));
   }
 
+  submitUserInfo = (name, quote, rank) => {
+    console.log(name, quote, rank)
+    this.setState({name: name, quote: quote, rank: rank} )
+    console.log(this.state)
+  }
+
   render() {
     return (
     <body>
         <main>
         <h1 className="title">Star Wars: Trivia</h1>
+        <h1 className="title">{this.state.name}</h1>
+        <h1 className="title">{this.state.quote}</h1>
+
           <NavLink to='/'>    
         <button>Sign Out</button>
           </NavLink>
         {this.state.isLoading && <h1>Loading...</h1>}
-        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} />} />}
+        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state} setUser={this.setUser} />} />}
         <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies} selectMovie={this.selectMovie} />} />
         <Route exact path='/movies/:id/characters' render={({match}) => {
         const { id } = match.params
         const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
         return (<CharacterContainer characters={characters}/>)
-      }} />
+      }} />=
         </main>
 
       </body>

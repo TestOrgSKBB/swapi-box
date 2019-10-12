@@ -16,6 +16,7 @@ export default class Form extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value})
+    console.log('handle change-->', this.state)
   };
 
   enableSubmitBtn = (e) => {
@@ -25,19 +26,33 @@ export default class Form extends Component {
     this.handleChange(e)
   };
 
-  submitUserInfo = (e) => {
-    e.preventDefault();
-    //pass info to app that will pass it to component that renders user info
-    this.resetInputs()
-  };
+  handleSubmit = () => {
+    const { name, quote, ranking } = this.state;
 
-  resetInputs = () => {
-    this.setState({
-      name: '',
-      quote: '',
-      rank: ''
-    });
-  };
+    if(name && quote) {
+        this.props.setUser(name, quote, ranking);
+        this.setState({ name:'' , ranking:'', quote:'', revealError:false, toMovies:true});
+    } else {
+        this.setState({revealError:true})
+    }
+  }
+
+  // submitUser = (e) => {
+  //   console.log('submit user firing')
+  //   e.preventDefault();
+  //   const {submitUserInfo} = this.props
+  //   console.log('in form-->', this.name, this.quote, this.rank)
+  //   submitUserInfo(this.name, this.quote, this.rank)
+  //   // this.resetInputs()
+  // };
+
+  // resetInputs = () => {
+  //   this.setState({
+  //     name: '',
+  //     quote: '',
+  //     rank: ''
+  //   });
+  // };
 
   render() {
     return(
@@ -66,7 +81,7 @@ export default class Form extends Component {
           <option name="rank" value="expert">Expert</option>
         </select>
         <NavLink className="form__button--link" to='/movies'>
-        <button className="form__button" title="Fill out each input to continue" disabled onClick={this.submitUserInfo}>Submit</button>
+        <button className="form__button" title="Fill out each input to continue" onClick={this.handleSubmit}>Submit</button>
         </NavLink>
       </form>
       </div>
