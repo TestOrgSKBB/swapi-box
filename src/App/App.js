@@ -14,7 +14,6 @@ export default class App extends Component {
     super()
     this.state= {
       movies: [],
-      characters: [],
       isLoading: true,
       name: '',
       quote: '',
@@ -44,32 +43,33 @@ export default class App extends Component {
     console.log(this.state)
   };
 
+  updateState = (statesObj) => {
+    this.setState(statesObj);
+  }
+
   render() {
     return (
-    <body>
-        <main>
+      <main>
         <div className="main__div">
-        <h1 className="title">Star Wars: Trivia</h1>
+          <h1 className="title">Star Wars: Trivia</h1>
         <div className="main__div--info">
-        <h1 className="user-info user-name">{this.state.name}</h1>
-        <h1 className="user-info user-quote">{this.state.quote}</h1>
-        <h1 className="user-info user-rank">{this.state.rank}</h1>
+          <h1 className="user-info user-name">{this.state.name}</h1>
+          <h1 className="user-info user-quote">{this.state.quote}</h1>
+          <h1 className="user-info user-rank">{this.state.rank}</h1>
         </div>
         </div>
-          <NavLink to='/'>    
-        <button>Sign Out</button>
-          </NavLink>
+        <NavLink to='/'>    
+          <button>Sign Out</button>
+        </NavLink>
         {this.state.isLoading && <h1>Loading...</h1>}
-        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state} setUser={this.setUser} />} />}
+        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} updateState={this.updateState} setUser={this.setUser} />} />}
         <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies} selectMovie={this.selectMovie} />} />
         <Route exact path='/movies/:id/characters' render={({match}) => {
         const { id } = match.params
         const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
         return (<CharacterContainer characters={characters}/>)
-      }} />=
-        </main>
-
-      </body>
+      }} />
+    </main>
     )
   }
 } 

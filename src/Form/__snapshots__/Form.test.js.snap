@@ -7,6 +7,7 @@ exports[`Form should match the snapshot 1`] = `
   <form>
     <input
       className="form__element form__input"
+      id="form__first-name"
       name="name"
       onChange={[Function]}
       placeholder="Enter Name"
@@ -15,6 +16,7 @@ exports[`Form should match the snapshot 1`] = `
     />
     <input
       className="form__element from__input"
+      id="form__fav-quote"
       name="quote"
       onChange={[Function]}
       placeholder="Enter Favorite Star Wars Quote"
@@ -51,13 +53,17 @@ exports[`Form should match the snapshot 1`] = `
         Expert
       </option>
     </select>
-    <button
-      className="form__element form__button"
-      disabled={true}
-      onClick={[Function]}
+    <NavLink
+      className="form__button--link"
+      to="/movies"
     >
-      Submit
-    </button>
+      <button
+        className="form__button"
+        onClick={[Function]}
+      >
+        Submit
+      </button>
+    </NavLink>
   </form>
 </div>
 `;
