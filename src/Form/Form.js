@@ -14,16 +14,10 @@ export default class Form extends Component {
   };
 
   handleChange = (e) => {
-<<<<<<< HEAD
-    this.setState({ [e.target.name]: e.target.value})
-    console.log('handle change-->', this.state)
-  };
-=======
     this.setState({[e.target.name]: e.target.value})
     const isNameGood = $('#form__first-name').val() !== '';
     const isQuoteGood = $('#form__fav-quote').val() !== '';
     const isRankGood = $('select').val() !== 'Rank';
->>>>>>> master
 
     if(isNameGood && isQuoteGood && isRankGood) {
       $('button').prop('disabled', false);
@@ -32,28 +26,28 @@ export default class Form extends Component {
     }
   }
 
-<<<<<<< HEAD
-  handleSubmit = () => {
-    const { name, quote, rank } = this.state;
-    this.props.setUser(name, quote, rank);
-    this.setState({ name:'' , rank:'', quote:'', revealError:false, toMovies:true});
-  }
+// <<<<<<< HEAD
+//   handleSubmit = () => {
+//     const { name, quote, rank } = this.state;
+//     this.props.setUser(name, quote, rank);
+//     this.setState({ name:'' , rank:'', quote:'', revealError:false, toMovies:true});
+//   }
 
-  resetInputs = () => {
-    this.setState({
-      name: '',
-      quote: '',
-      rank: ''
-    });
-  };
-=======
+//   resetInputs = () => {
+//     this.setState({
+//       name: '',
+//       quote: '',
+//       rank: ''
+//     });
+//   };
+// =======
   submitUserInfo = () => {
     const name = $('#form__first-name').val();
     const quote = $('#form__fav-quote').val();
     const rank = $('select').val();
     this.props.updateState({name, quote, rank});
   }
->>>>>>> master
+// >>>>>>> master
 
   render() {
     return(
@@ -84,15 +78,11 @@ export default class Form extends Component {
           <option name="rank" value="expert">Expert</option>
         </select>
         <NavLink className="form__button--link" to='/movies'>
-<<<<<<< HEAD
-        <button className="form__button" title="Fill out each input to continue" onClick={this.handleSubmit}>Submit</button>
-=======
         <button 
           className="form__button" 
           onClick={this.submitUserInfo}  
         >
         Submit</button>
->>>>>>> master
         </NavLink>
       </form>
       </div>
