@@ -48,10 +48,14 @@ export default class App extends Component {
     return (
     <body>
         <main>
+        <div className="main__div">
         <h1 className="title">Star Wars: Trivia</h1>
-        <h1 className="title">{this.state.name}</h1>
-        <h1 className="title">{this.state.quote}</h1>
-        <h1 className="title">{this.state.rank}</h1>
+        <div className="main__div--info">
+        <h1 className="user-info user-name">{this.state.name}</h1>
+        <h1 className="user-info user-quote">{this.state.quote}</h1>
+        <h1 className="user-info user-rank">{this.state.rank}</h1>
+        </div>
+        </div>
 
           <NavLink to='/'>    
         <button>Sign Out</button>

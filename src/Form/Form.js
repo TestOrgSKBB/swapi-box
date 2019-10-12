@@ -28,35 +28,22 @@ export default class Form extends Component {
 
   handleSubmit = () => {
     const { name, quote, rank } = this.state;
-
-    if(name && quote) {
-        this.props.setUser(name, quote, rank);
-        this.setState({ name:'' , rank:'', quote:'', revealError:false, toMovies:true});
-    } else {
-        this.setState({revealError:true})
-    }
+    this.props.setUser(name, quote, rank);
+    this.setState({ name:'' , rank:'', quote:'', revealError:false, toMovies:true});
   }
 
-  // submitUser = (e) => {
-  //   console.log('submit user firing')
-  //   e.preventDefault();
-  //   const {submitUserInfo} = this.props
-  //   console.log('in form-->', this.name, this.quote, this.rank)
-  //   submitUserInfo(this.name, this.quote, this.rank)
-  //   // this.resetInputs()
-  // };
-
-  // resetInputs = () => {
-  //   this.setState({
-  //     name: '',
-  //     quote: '',
-  //     rank: ''
-  //   });
-  // };
+  resetInputs = () => {
+    this.setState({
+      name: '',
+      quote: '',
+      rank: ''
+    });
+  };
 
   render() {
     return(
       <div id="form__div--container">
+                <h1 className="title">Star Wars: Trivia</h1>
       <form>
         <input 
           className="form__element form__input"
