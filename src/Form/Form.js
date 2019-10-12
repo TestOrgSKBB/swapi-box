@@ -27,11 +27,11 @@ export default class Form extends Component {
   };
 
   handleSubmit = () => {
-    const { name, quote, ranking } = this.state;
+    const { name, quote, rank } = this.state;
 
     if(name && quote) {
-        this.props.setUser(name, quote, ranking);
-        this.setState({ name:'' , ranking:'', quote:'', revealError:false, toMovies:true});
+        this.props.setUser(name, quote, rank);
+        this.setState({ name:'' , rank:'', quote:'', revealError:false, toMovies:true});
     } else {
         this.setState({revealError:true})
     }

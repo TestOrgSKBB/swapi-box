@@ -51,6 +51,7 @@ export default class App extends Component {
         <h1 className="title">Star Wars: Trivia</h1>
         <h1 className="title">{this.state.name}</h1>
         <h1 className="title">{this.state.quote}</h1>
+        <h1 className="title">{this.state.rank}</h1>
 
           <NavLink to='/'>    
         <button>Sign Out</button>
