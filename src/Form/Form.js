@@ -43,7 +43,6 @@ export default class Form extends Component {
   render() {
     return(
       <div id="form__div--container">
-                <h1 className="title">Star Wars: Trivia</h1>
       <form>
         <input 
           className="form__element form__input"

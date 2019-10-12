@@ -20,13 +20,13 @@ export default class App extends Component {
       quote: '',
       rank:''
     }
-  }
+  };
 
   setUser = (name, quote, rank)=> {
     console.log(name, quote, rank)
     this.setState({ name, quote, rank })
     console.log('state', this.state)
-  }
+  };
 
   componentDidMount = () => {
     fetchData()
@@ -36,13 +36,13 @@ export default class App extends Component {
     })
     .then(movies => this.setState({ movies , isLoading: false}))
     .catch(error => console.log(error));
-  }
+  };
 
   submitUserInfo = (name, quote, rank) => {
     console.log(name, quote, rank)
     this.setState({name: name, quote: quote, rank: rank} )
     console.log(this.state)
-  }
+  };
 
   render() {
     return (
@@ -56,7 +56,6 @@ export default class App extends Component {
         <h1 className="user-info user-rank">{this.state.rank}</h1>
         </div>
         </div>
-
           <NavLink to='/'>    
         <button>Sign Out</button>
           </NavLink>
