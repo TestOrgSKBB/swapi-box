@@ -7,7 +7,16 @@ const MovieContainer = ( props ) => {
   const displayMovies = props.movies.map( movie => {
 
     const {title , episode_id, release_date, characters } = movie;
-    return <MovieCard selectMovie={props.selectMovie} title={title} id={episode_id} key={episode_id} release_date={release_date} characters={characters} />
+    const selectMovie = props.selectMovie;
+    return <MovieCard 
+      selectMovie={selectMovie} 
+      title={title}
+      id={episode_id} 
+      episode_id={episode_id} 
+      key={episode_id} 
+      release_date={release_date} 
+      characters={characters} 
+    />
   });
 
   return (

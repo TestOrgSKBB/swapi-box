@@ -28,7 +28,7 @@ const fetchCharacterData = (characters) => {
     .then(characterData => {
       const {films, homeworld, name, species } = characterData
       return fetchSpecies(species)
-        .then(species => ({ name, films, species, homeworld }));
+        .then(species => ({ name, films, species, homeworld, isFavorited: false }));
     })
   })
   return Promise.all(charactersData);

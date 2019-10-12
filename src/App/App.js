@@ -17,14 +17,9 @@ export default class App extends Component {
       isLoading: true,
       name: '',
       quote: '',
-      rank:''
+      rank:'',
+      currentMovie: null,
     }
-  };
-
-  setUser = (name, quote, rank)=> {
-    console.log(name, quote, rank)
-    this.setState({ name, quote, rank })
-    console.log('state', this.state)
   };
 
   componentDidMount = () => {
@@ -37,14 +32,23 @@ export default class App extends Component {
     .catch(error => console.log(error));
   };
 
-  submitUserInfo = (name, quote, rank) => {
-    console.log(name, quote, rank)
-    this.setState({name: name, quote: quote, rank: rank} )
-    console.log(this.state)
-  };
-
   updateState = (statesObj) => {
     this.setState(statesObj);
+  }
+
+  selectMovie = e => {
+    const episode_id = e.target.closest('section').id;
+    console.log('hiii', episode_id);
+    this.setState({ currentMovie: episode_id });;
+  }
+
+  updateFavorite = name => {
+    const movies = this.state.movies.map( movie => movie );
+    const movie = movies.find( movie => movie.episode_id === Number(this.state.currentMovie));
+    const character = movie.characters.find( character => character.name === name);
+    const favorited = character.isFavorited;
+    character.isFavorited = !favorited;
+    this.setState({ movies });
   }
 
   render() {
@@ -62,12 +66,12 @@ export default class App extends Component {
           <button>Sign Out</button>
         </NavLink>
         {this.state.isLoading && <h1>Loading...</h1>}
-        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} updateState={this.updateState} setUser={this.setUser} />} />}
+        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} updateState={this.updateState} />} />}
         <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies} selectMovie={this.selectMovie} />} />
         <Route exact path='/movies/:id/characters' render={({match}) => {
         const { id } = match.params
         const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
-        return (<CharacterContainer characters={characters}/>)
+        return (<CharacterContainer characters={characters} updateFavorite={this.updateFavorite} />)
       }} />
     </main>
     )

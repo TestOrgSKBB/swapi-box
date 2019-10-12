@@ -26,28 +26,12 @@ export default class Form extends Component {
     }
   }
 
-// <<<<<<< HEAD
-//   handleSubmit = () => {
-//     const { name, quote, rank } = this.state;
-//     this.props.setUser(name, quote, rank);
-//     this.setState({ name:'' , rank:'', quote:'', revealError:false, toMovies:true});
-//   }
-
-//   resetInputs = () => {
-//     this.setState({
-//       name: '',
-//       quote: '',
-//       rank: ''
-//     });
-//   };
-// =======
   submitUserInfo = () => {
     const name = $('#form__first-name').val();
     const quote = $('#form__fav-quote').val();
     const rank = $('select').val();
     this.props.updateState({name, quote, rank});
   }
-// >>>>>>> master
 
   render() {
     return(

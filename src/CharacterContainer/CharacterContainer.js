@@ -5,7 +5,7 @@ import CharacterCard from '../CharacterCard/CharacterCard';
 
 const CharacterContainer = ( props ) => {
   $('.title').text('Characters')
-  const character = props.characters.map(character => <CharacterCard character={character} />)
+  const character = props.characters.map(character => <CharacterCard character={character} updateFavorite={props.updateFavorite}/>)
 
   return (
     <>
