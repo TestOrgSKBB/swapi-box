@@ -2,7 +2,6 @@ import React from 'react';
 import $ from 'jquery';
 import '../MovieContainer/MovieContainer.scss'
 import MovieCard from '../MovieCard/MovieCard';
-import { Route, NavLink } from 'react-router-dom';
 
 const MovieContainer = ( props ) => {
   $('.title').text('Movies')
