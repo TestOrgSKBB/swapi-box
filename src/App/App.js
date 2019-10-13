@@ -23,13 +23,24 @@ export default class App extends Component {
   };
 
   componentDidMount = () => {
-    fetchData()
-    .then(data => {
-      console.log(data);
-      return data;
-    })
-    .then(movies => this.setState({ movies , isLoading: false}))
-    .catch(error => console.log(error));
+    if(localStorage.getItem('movies')) {
+      let movies = localStorage.getItem('movies');
+      movies = JSON.parse(movies);
+      this.setState({ movies, isLoading: false });
+    } else {
+      fetchData()
+        .then(data => {
+          console.log(data);
+          return data;
+        })
+        .then(movies => {
+          this.setState({ movies , isLoading: false})
+          const stringyMovies = JSON.stringify(movies);
+          localStorage.setItem('movies', stringyMovies);
+        })
+        .catch(error => console.log(error));
+    }
+    
   };
 
   updateState = (statesObj) => {
@@ -48,6 +59,7 @@ export default class App extends Component {
     const favorited = character.isFavorited;
     character.isFavorited = !favorited;
     this.setState({ movies });
+    localStorage.setItem('movies', JSON.stringify(movies));
   }
 
   returnFavoriteCharacters = () => {
