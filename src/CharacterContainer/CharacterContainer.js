@@ -5,11 +5,11 @@ import CharacterCard from '../CharacterCard/CharacterCard';
 
 const CharacterContainer = ( props ) => {
   $('.title').text('Characters')
-  const character = props.characters.map(character => <CharacterCard character={character} updateFavorite={props.updateFavorite}/>)
+  const displayCharacters = props.characters.map((character, i) => <CharacterCard character={character} updateFavorite={props.updateFavorite} key={i} />)
 
   return (
     <>
-      <h1>{character}</h1>
+      {displayCharacters}
     </>
   )
  }  

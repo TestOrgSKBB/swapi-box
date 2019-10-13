@@ -1,15 +1,10 @@
   
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './CharacterCard.scss'
 import favoriteImg from '../images/favorite.png';
 import activeFavoriteImg from '../images/active-favorite.png';
 
 class Character extends Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   toggleFavorited = () => {
     const { name } = this.props.character;
@@ -18,7 +13,7 @@ class Character extends Component {
 
   returnFilms = () => {
     const films = this.props.character.films;
-    return films.map(film => <p>{film.title}</p>);
+    return films.map((film, i) => <p key={i}>{film.title}</p>);
   }
 
   render() {

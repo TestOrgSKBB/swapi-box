@@ -1,11 +1,10 @@
 import React from 'react';
 import './MovieCard.scss';
-import { Route, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 // import MovieCard from '../MovieCard/MovieCard';
 
 const MovieCard = (props) => {
   const { title, release_date, id, episode_id, selectMovie } = props;
-  console.log(selectMovie);
   return (
     <section id={episode_id} >
       <h2>{title}</h2>

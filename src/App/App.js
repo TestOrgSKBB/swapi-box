@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Form from '../Form/Form';
 import './App.scss'
-import { format } from 'url';
 import { Route, NavLink } from 'react-router-dom';
 import { fetchData } from '../apiCalls';
 
@@ -38,7 +37,6 @@ export default class App extends Component {
 
   selectMovie = e => {
     const episode_id = e.target.closest('section').id;
-    console.log('hiii', episode_id);
     this.setState({ currentMovie: episode_id });;
   }
 
