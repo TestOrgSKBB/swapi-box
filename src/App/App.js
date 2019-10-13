@@ -3,6 +3,7 @@ import Form from '../Form/Form';
 import './App.scss'
 import { Route, NavLink } from 'react-router-dom';
 import { fetchData } from '../apiCalls';
+import FavoriteCharactersContainer from '../FavoriteCharactersContainer/FavoriteCharactersContainer';
 
 
 import CharacterContainer from '../CharacterContainer/CharacterContainer'
@@ -49,6 +50,12 @@ export default class App extends Component {
     this.setState({ movies });
   }
 
+  returnFavoriteCharacters = () => {
+    const movie = this.state.movies.find(movie => movie.episode_id === Number(this.state.currentMovie));
+    const favCharacters = movie.characters.filter(character => character.isFavorited);
+    return favCharacters;
+  }
+
   render() {
     return (
       <main>
@@ -71,6 +78,12 @@ export default class App extends Component {
         const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
         return (<CharacterContainer characters={characters} updateFavorite={this.updateFavorite} />)
       }} />
+        <Route exact path='/movies/favorite-characters' render={() => {
+          return <FavoriteCharactersContainer 
+            characters={this.returnFavoriteCharacters()} 
+            updateFavorite={this.updateFavorite} 
+          />
+        }} />
     </main>
     )
   }
