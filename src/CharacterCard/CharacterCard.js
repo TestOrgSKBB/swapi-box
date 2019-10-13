@@ -1,4 +1,3 @@
-  
 import React, { Component } from 'react';
 import './CharacterCard.scss'
 import favoriteImg from '../images/favorite.png';
