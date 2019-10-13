@@ -56,6 +56,10 @@ export default class App extends Component {
     return favCharacters;
   }
 
+  signOut = () => {
+    this.setState({name: '', quote: '', rank: ''});
+  }
+
   render() {
     return (
       <main>
@@ -67,7 +71,7 @@ export default class App extends Component {
           <h1 className="user-info user-rank">{this.state.rank}</h1>
         </div>
         <NavLink to='/'>    
-          <button className="button__sign-out">Sign Out</button>
+          <button className="button__sign-out" onClick={this.signOut}>Sign Out</button>
         </NavLink>
         </div>
         {this.state.isLoading && <h1>Loading...</h1>}
@@ -76,7 +80,6 @@ export default class App extends Component {
         <Route exact path='/movies/:id/characters' render={({match}) => {
         const { id } = match.params
         const opening_crawl = this.state.movies.find(movie => movie.episode_id === parseInt(id)).opening_crawl
-        {console.log('in app----->', opening_crawl)}
         const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
         return (<CharacterContainer opening_crawl={opening_crawl} characters={characters} updateFavorite={this.updateFavorite} />)
       }} />
