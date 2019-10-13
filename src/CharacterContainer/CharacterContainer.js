@@ -7,12 +7,12 @@ const CharacterContainer = ( props ) => {
   console.log('CHARACTER PROPS', props)
   $('.title').text('Characters')
   const character = props.characters.map(character => <CharacterCard character={character} />)
-  const scroll = props.opening_scroll
-  console.log('SCROLL', scroll)
+  const opening_crawl = props.opening_crawl
+  console.log('SCROLL', opening_crawl)
   return (
     <>
       <h1>{character}</h1>
-      <h1>{scroll}</h1>
+      <h1>{opening_crawl}</h1>
     </>
   )
  }  
