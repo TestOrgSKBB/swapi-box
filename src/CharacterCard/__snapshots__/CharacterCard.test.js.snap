@@ -1,47 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharacterCard Should match the snapshot with all correct data 1`] = `
-<article
-  className="character__cards"
->
-  <h5>
-    Name: 
-    Pants
-  </h5>
-  <h5>
-    HomeWorld: 
-    E
-  </h5>
-  <h6>
-    Population: 
-    a
-  </h6>
-  <h5>
-    Species: 
-    Dog
-  </h5>
-  <div>
-    <h6>
-      Featured Films:
-    </h6>
-    <h5>
-      <p
-        key="0"
-      />
-      <p
-        key="1"
-      />
-    </h5>
-  </div>
-  <img
-    alt="favorite button"
-    className="article__favorite-button"
-    onClick={[Function]}
-    src="favorite.png"
-  />
-</article>
-`;
-
 exports[`CharacterCard should match the snapshot with all correct data 1`] = `
 <article
   className="character__cards"
