@@ -61,6 +61,3 @@ const fetchSpecies = (species) => {
       })
       .catch(err => console.log(`Error fetching species: ${err}`));
 }
-
-
- 

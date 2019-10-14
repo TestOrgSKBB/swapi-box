@@ -1,26 +1,33 @@
 import React from 'react';
-import './MovieCard.scss';
-import { NavLink } from 'react-router-dom'
+import $ from 'jquery';
+import '../MovieContainer/MovieContainer.scss'
+import MovieCard from '../MovieCard/MovieCard';
 
-const MovieCard = (props) => {
-  const { title, release_date, id, episode_id, selectMovie } = props;
+const MovieContainer = ( props ) => {
+  $('.title').text('Movies')
+  
+  const displayMovies = props.movies.map( movie => {
+
+    const {title , episode_id, release_date, characters, opening_crawl } = movie;
+    const selectMovie = props.selectMovie;
+    return <MovieCard 
+      selectMovie={selectMovie} 
+      title={title}
+      id={episode_id} 
+      episode_id={episode_id} 
+      key={episode_id} 
+      release_date={release_date} 
+      characters={characters}
+      opening_crawl={opening_crawl} 
+    />
+  });
+
   return (
-    <section className="section__movie--card" id={episode_id} >
-      <h2 className="movie__card--element">{title}</h2>
-      <h3 className="movie__card--element">Episode {id}</h3>
-      <h3 className="movie__card--element">{release_date}</h3>
-      <NavLink className="movie__button--link" to={`movies/${id}/characters`}>
-        <button 
-          className="button_view-characters" 
-          value={props.episode} 
-          onClick={selectMovie}
-        >
-          View Characters
-        </button>
-      </NavLink>
+    <section className="section__movie--container">
+      {displayMovies}
     </section>
-  );
-}
+  )
+ }  
 
 
-export default MovieCard
+export default MovieContainer;
