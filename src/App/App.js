@@ -90,10 +90,16 @@ export default class App extends Component {
         {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} updateState={this.updateState} />} />}
         <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies} selectMovie={this.selectMovie} />} />
         <Route exact path='/movies/:id/characters' render={({match}) => {
-        const { id } = match.params
-        const opening_crawl = this.state.movies.find(movie => movie.episode_id === parseInt(id)).opening_crawl
-        const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters
-        return (<CharacterContainer opening_crawl={opening_crawl} characters={characters} updateFavorite={this.updateFavorite} />)
+        const { id } = match.params;
+        const opening_crawl = this.state.movies.find(movie => movie.episode_id === parseInt(id)).opening_crawl;
+        const characters = this.state.movies.find(movie => movie.episode_id === parseInt(id)).characters;
+        const numFavorites = this.returnFavoriteCharacters().length;
+        return (<CharacterContainer 
+          opening_crawl={opening_crawl} 
+          characters={characters} 
+          updateFavorite={this.updateFavorite}
+          numFavorites={numFavorites} 
+        />);
       }} />
         <Route exact path='/movies/favorite-characters' render={() => {
           return <FavoriteCharactersContainer 

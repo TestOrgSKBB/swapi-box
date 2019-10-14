@@ -11,7 +11,7 @@ const CharacterContainer = ( props ) => {
   return (
     <>
       <NavLink to='/movies/favorite-characters' >
-        <button>View Favorites</button>
+        <button>View Favorites ({props.numFavorites})</button>
       </NavLink>
       {displayCharacters}
       <h1>{opening_crawl}</h1>
