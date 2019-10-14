@@ -48,20 +48,21 @@ font-size: .8em;
 }
 
 .button__sign-out {
-  background: rgba($color: #37333E, $alpha: .4);
-  height: 6vh;
+  background: rgba(55, 51, 62, 0.4);
+  height: 5vh;
   color: #919192;
-  margin-top: 51%;
-  width: 212%;
+  margin-top: 60%;
+  width: 236%;
+  border: 1px solid #919192;
   border-radius: 30px;
   font-size: 1em;
   font-weight: bold;
 }
 
 .button__sign-out:hover {
-  background-color :rgb(255, 44, 44);
-  color: black;
-  border-color: black;
+  background: rgba(143, 171, 172, .7);
+  border:2px solid rgba(32, 37, 40, .8);
+  color: #963025;
 }
 
 .main__div {

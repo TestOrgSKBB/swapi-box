@@ -43,3 +43,24 @@
   z-index: -10;
   position: absolute
 }
+
+.button__view-favorites {
+  position: absolute;
+  top: 12%;
+  left: 45%;
+  width: 10%;
+  height: 3vh;
+  border-radius: 16em;
+  font-size: 1em;
+  background: rgba(55, 51, 62, 0.4);
+  color: #919192;
+  border: 1px solid #919192;
+  
+}
+
+.button__view-favorites:hover {
+  background: rgba(143, 171, 172, .7);
+  border: 2px dotted rgba(32, 37, 40, .8);
+  color: rgba(32, 37, 40, .8);
+  font-weight: bold;
+}
