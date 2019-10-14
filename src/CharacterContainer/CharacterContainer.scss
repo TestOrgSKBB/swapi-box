@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   justify-content: center;
   font-family: 'Pathway Gothic One', sans-serif;
+  overflow: scroll;
+  height: 84vh;
+  border: 2px solid purple;
+  // margin-top: 10%;
 }
 
 .div__crawl {
@@ -27,7 +31,6 @@
 .star-wars {
   display: flex;
   justify-content: center;
-  height: 800px;
   perspective: 400px;
   color: #feda4a;
   font-family: 'Pathway Gothic One', sans-serif;
@@ -36,5 +39,7 @@
   letter-spacing: 6px;
   line-height: 150%;
   text-align: justify;
+  height: 68%;
   z-index: -10;
+  position: absolute
 }
