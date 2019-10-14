@@ -31,8 +31,15 @@ describe('App', () => {
 
   describe('updateState', () => {
     it('should update the state', () => {
-      wrapper.instance().updateState({name: 'obi wan'});
+      wrapper.instance().updateState(
+        {
+          name: 'obi wan',
+          quote: 'hello',
+          rank: 'master',
+      });
       expect(wrapper.state('name')).toEqual('obi wan');
+      expect(wrapper.state('quote')).toEqual('hello');
+      expect(wrapper.state('rank')).toEqual('master');
     });
   });
 
@@ -51,6 +58,7 @@ describe('App', () => {
     it('should toggle a characters favorite status for a particular movie', () => {
       wrapper.instance().updateFavorite('Luke');
       expect(wrapper.state('movies')[0].characters[0].isFavorited).toEqual(true);
+      
     });
   });
 

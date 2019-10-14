@@ -21,9 +21,7 @@ exports[`App should match the snapshot 1`] = `
       <h1
         className="user-info user-quote"
       >
-        " 
         Star Wars
-         "
       </h1>
       <h1
         className="user-info user-rank"

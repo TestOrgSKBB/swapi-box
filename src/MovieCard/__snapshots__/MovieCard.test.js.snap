@@ -6,7 +6,7 @@ exports[`MovieCard should match the snapshot 1`] = `
   id={1}
 >
   <h2
-    className="movie__card--element"
+    className="movie__card--element movie__element--title"
   >
     Star Wars: A New Hope
   </h2>

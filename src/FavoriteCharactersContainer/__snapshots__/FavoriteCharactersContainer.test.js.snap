@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteCharactersContainer should match the snapshot 1`] = `
+<Fragment>
+  <Character
+    character={
+      Object {
+        "homeplanet": "mars",
+        "isFavorited": true,
+        "name": "Obi",
+      }
+    }
+    key="0"
+    updateFavorite={[MockFunction]}
+  />
+  <Character
+    character={
+      Object {
+        "homeplanet": "earth",
+        "isFavorited": true,
+        "name": "Yoda",
+      }
+    }
+    key="1"
+    updateFavorite={[MockFunction]}
+  />
+</Fragment>
+`;
