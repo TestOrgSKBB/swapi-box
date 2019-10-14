@@ -9,7 +9,8 @@ export default class Form extends Component {
     this.state = {
       name: '',
       quote: '',
-      rank: ''
+      rank: '',
+      isComplete: false,
     };
   };
 
@@ -20,13 +21,14 @@ export default class Form extends Component {
     const isRankGood = $('select').val() !== 'Rank';
 
     if(isNameGood && isQuoteGood && isRankGood) {
-      $('button').prop('disabled', false);
+      this.setState({ isComplete: true })
     } else {
-      $('button').prop('disabled', true);
+      this.setState({ isComplete: false })
     }
   }
 
 // <<<<<<< HEAD
+// =======
 //   handleSubmit = () => {
 //     const { name, quote, rank } = this.state;
 //     this.props.setUser(name, quote, rank);
@@ -40,16 +42,17 @@ export default class Form extends Component {
 //       rank: ''
 //     });
 //   };
-// =======
+
+// >>>>>>> origin/opening-crawl
   submitUserInfo = () => {
     const name = $('#form__first-name').val();
     const quote = $('#form__fav-quote').val();
     const rank = $('select').val();
     this.props.updateState({name, quote, rank});
   }
-// >>>>>>> master
 
   render() {
+
     return(
       <div id="form__div--container">
       <form>
@@ -78,11 +81,14 @@ export default class Form extends Component {
           <option name="rank" value="expert">Expert</option>
         </select>
         <NavLink className="form__button--link" to='/movies'>
-        <button 
-          className="form__button" 
-          onClick={this.submitUserInfo}  
-        >
-        Submit</button>
+          {!this.state.isComplete && <button 
+            className="form__button" 
+            disabled  
+          >Submit</button>}
+          {this.state.isComplete && <button
+            className="form__button"
+            onClick={this.submitUserInfo}
+          >Submit</button>}
         </NavLink>
       </form>
       </div>
