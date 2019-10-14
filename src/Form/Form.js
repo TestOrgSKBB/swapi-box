@@ -27,7 +27,6 @@ export default class Form extends Component {
     }
   }
 
-
   handleSubmit = () => {
     const { name, quote, rank } = this.state;
     this.props.setUser(name, quote, rank);
@@ -50,7 +49,6 @@ export default class Form extends Component {
   }
 
   render() {
-
     return(
       <div id="form__div--container">
       <form>
@@ -79,7 +77,6 @@ export default class Form extends Component {
           <option name="rank" value="expert">Expert</option>
         </select>
         <NavLink className="form__button--link" to='/movies'>
-
           {!this.state.isComplete && <button 
             className="form__button" 
             disabled  
