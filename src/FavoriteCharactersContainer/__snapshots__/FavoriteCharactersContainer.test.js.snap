@@ -21,3 +21,11 @@ exports[`FavoriteCharactersContainer should match the snapshot with the correct 
   />
 </Fragment>
 `;
+
+exports[`FavoriteCharactersContainer should match the snapshot with the correct data 2`] = `
+<Fragment>
+  <h1>
+    No Favorite Characters
+  </h1>
+</Fragment>
+`;
