@@ -19,7 +19,6 @@ describe('CharacterCard', () => {
       key={100}
       character={mockCharacter}
       updateFavorite={mockUpdateFavorite}
-      // toggleFavorited={mockToggleFavorited}
       />)
   });
 
@@ -37,15 +36,6 @@ describe('toggleFavorites', () => {
       />)
       wrapper.find('.article__favorite-button').simulate('click');
       expect(mockUpdateFavorite).toHaveBeenCalled()
+    })
   })
 })
-})
-
-
-
-// describe('submitUserInfo', () => {
-//   it('should call updateState', () => {
-//     wrapper.find('button').simulate('click');
-//     expect(mockUpdateState).toHaveBeenCalled();
-//   });
-// });

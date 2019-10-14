@@ -4,7 +4,13 @@ import CharacterCard from '../CharacterCard/CharacterCard';
 class FavoriteCharactersContainer extends Component {
 
   displayFavoriteCharacters = () => {
-    return this.props.characters.map( (character, i) => <CharacterCard character={character} updateFavorite={this.props.updateFavorite} key={i} />)
+    console.log(this.props)
+    return this.props.characters.map( (character, i) => 
+      <CharacterCard 
+        character={character} 
+        updateFavorite={this.props.updateFavorite} 
+        key={i} 
+      />)
   }
 
   render() {

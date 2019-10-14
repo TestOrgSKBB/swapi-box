@@ -6,7 +6,13 @@ import '../CharacterContainer/CharacterContainer.scss'
 
 const CharacterContainer = ( props ) => {
   $('.title').text('Characters');
-  const displayCharacters = props.characters.slice(0, 10).map((character, i) => <CharacterCard character={character} updateFavorite={props.updateFavorite} key={i} />);
+  const displayCharacters = props.characters.slice(0, 10).map((character, i) => 
+    <CharacterCard 
+      character={character} 
+      updateFavorite={props.updateFavorite} 
+      key={i} 
+    />);
+
   const opening_crawl = props.opening_crawl;
 
   return (
@@ -16,11 +22,11 @@ const CharacterContainer = ( props ) => {
       </NavLink>
       {displayCharacters}
       <div className="star-wars">
-      <div className="div__crawl">
-      <p>{opening_crawl}</p>
+        <div className="div__crawl">
+        <p>{opening_crawl}</p>
+        </div>
       </div>
-      </div>
-      </section>
+    </section>
   );
  }; 
 
