@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterContainer should match the snapshot with all correct data 1`] = `
+<section
+  className="section__characters"
+>
+  <NavLink
+    to="/movies/favorite-characters"
+  >
+    <button>
+      View Favorites (
+      )
+    </button>
+  </NavLink>
+  <div
+    className="star-wars"
+  >
+    <div
+      className="div__crawl"
+    >
+      <p />
+    </div>
+  </div>
+</section>
+`;

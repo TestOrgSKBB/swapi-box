@@ -19,7 +19,7 @@ describe('CharacterCard', () => {
       />)
   });
 
-  it('Should match the snapshot with all correct data', () => {
+  it('should match the snapshot with all correct data', () => {
     expect(wrapper).toMatchSnapshot();
   });
 })
