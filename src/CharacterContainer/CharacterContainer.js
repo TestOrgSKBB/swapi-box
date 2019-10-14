@@ -14,11 +14,15 @@ const CharacterContainer = ( props ) => {
       <NavLink to='/movies/favorite-characters' >
         <button>View Favorites ({props.numFavorites})</button>
       </NavLink>
+      
       {displayCharacters}
-      <h1>{opening_crawl}</h1>
+      <div className="star-wars">
+      <div className="div__crawl">
+      <p>{opening_crawl}</p>
+      </div>
+      </div>
       </section>
   );
- };  
-
+ }; 
 
 export default CharacterContainer;
