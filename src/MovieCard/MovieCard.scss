@@ -8,13 +8,19 @@
   text-align: center;
   position: relative;
   border-radius: 2em;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .1s ease-in-out;
+}
+
+.section__movie--card:hover {
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
 }
 
 .button_view-characters {
   background: rgba(32, 37, 40, .5);
   color: white;
   height: 6vh;
-  // border-radius: 2em;
   font-size: 1.25em;
   width: 100%;
   position: absolute;

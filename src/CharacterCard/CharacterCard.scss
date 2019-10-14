@@ -12,6 +12,13 @@ $red-font: #963025;
   height: 57vh;
   text-align: center;
   position: relative;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .1s ease-in-out;
+}
+
+.character__cards:hover {
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
 }
 
 .character__card--element {
@@ -19,7 +26,6 @@ $red-font: #963025;
   font-size: 1.5em;
   margin-top: 2%;
   margin-bottom: 2%;
-
 }
 
 .character__card--div {
@@ -44,9 +50,16 @@ $red-font: #963025;
 .article__favorite-button {
   position: absolute;
   left: 0;
-  max-width: 11%;
-  margin-top: 1.5%;
-  background: rgba(55, 51, 62, 0.4);
-  color: #919192;
+  max-width: 9%;
+  margin-top: 2.4%;
+  margin-left: 2%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition:         transform .3s ease-in-out;
 }
 
+.article__favorite-button:hover {
+  cursor:pointer;
+  // max-width: 12%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
