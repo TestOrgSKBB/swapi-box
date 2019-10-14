@@ -8,13 +8,11 @@
   text-align: center;
   position: relative;
   border-radius: 2em;
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: transform .1s ease-in-out;
+  transition: transform .2s
 }
 
 .section__movie--card:hover {
-  -webkit-transform: rotate(2deg);
-  transform: rotate(2deg);
+  transform: scale(1.1); 
 }
 
 .button_view-characters {
