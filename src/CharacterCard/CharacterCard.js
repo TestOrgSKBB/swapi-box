@@ -12,7 +12,7 @@ class Character extends Component {
 
   returnFilms = () => {
     const films = this.props.character.films;
-    return films.map((film, i) => <p key={i}>{film.title}</p>);
+    return films.map((film, i) => <p className="character__card--films" key={i}>{film.title}</p>);
   }
 
   render() {
@@ -20,15 +20,7 @@ class Character extends Component {
 
     return (
       <article className="character__cards">
-        <h5>Name: {name}</h5>
-        <h5>HomeWorld: {homeworld[0]}</h5>
-        <h6>Population: {homeworld[1]}</h6>
-        <h5>Species: {species}</h5>
-        <div>
-          <h6>Featured Films:</h6>
-          <h5>{this.returnFilms()}</h5>
-        </div>
-        { !isFavorited && <img 
+          { !isFavorited && <img 
           onClick={this.toggleFavorited} 
           className='article__favorite-button' 
           src={favoriteImg} 
@@ -38,7 +30,16 @@ class Character extends Component {
           className='article__favorite-button' 
           src={activeFavoriteImg} 
           alt='favorite button' /> }
-        
+        <h5 className="character__card--element">Name: <span className="character__card--info">{name}</span></h5>
+        <h5 className="character__card--element">HomeWorld: <span className="character__card--info">{homeworld[0]}</span></h5>
+        <h6 className="character__card--element">Population: <span className="character__card--info">{homeworld[1]}</span></h6>
+        <h5 className="character__card--element">Species: <span className="character__card--info">{species}</span></h5>
+        <div>
+          <h6 className="character__card--element">Featured Films:</h6>
+          <div className="character__card--div">
+          {this.returnFilms()}
+          </div>
+        </div>
       </article>
     );
   };

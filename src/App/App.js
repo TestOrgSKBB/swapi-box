@@ -39,6 +39,7 @@ export default class App extends Component {
           localStorage.setItem('movies', stringyMovies);
         })
         .catch(error => console.log(error));
+        console.log('movie-->', this.state)
     }
     
   };
@@ -87,7 +88,7 @@ export default class App extends Component {
         </NavLink>
         </div>
         {this.state.isLoading && <h1>Loading...</h1>}
-        {!this.state.isLoading && <Route exact path='/' render={() => <Form movie={this.state.movies} updateState={this.updateState} />} />}
+        {!this.state.isLoading && <Route exact path='/' render={() => <Form movies={this.state.movies} updateState={this.updateState} />} />}
         <Route exact path='/movies' render={() => <MovieContainer movies={this.state.movies} selectMovie={this.selectMovie} />} />
         <Route exact path='/movies/:id/characters' render={({match}) => {
         const { id } = match.params;
@@ -111,3 +112,7 @@ export default class App extends Component {
     );
   };
 };
+
+
+
+
