@@ -29,11 +29,6 @@ describe('CharacterContainer', () => {
       population: '2000 3',
       species:'human 3'
     }]}
-    user={{
-      name: 'Dog',
-      quote: 'Bark',
-      ranking: 'Pretty good'
-    }}
   />)
  });
 

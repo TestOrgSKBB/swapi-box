@@ -2,11 +2,57 @@
 
 exports[`App should match the snapshot 1`] = `
 <main>
+  <div
+    className="main__div"
+  >
+    <h1
+      className="title"
+    >
+      Star Wars: Trivia
+    </h1>
+    <div
+      className="main__div--info"
+    >
+      <h1
+        className="user-info user-name"
+      />
+      <h1
+        className="user-info user-quote"
+      >
+        " 
+         "
+      </h1>
+      <h1
+        className="user-info user-rank"
+      />
+    </div>
+    <NavLink
+      to="/"
+    >
+      <button
+        className="button__sign-out"
+        onClick={[Function]}
+      >
+        Sign Out
+      </button>
+    </NavLink>
+  </div>
   <h1>
     Loading...
   </h1>
   <Route
+    exact={true}
     path="/movies"
+    render={[Function]}
+  />
+  <Route
+    exact={true}
+    path="/movies/:id/characters"
+    render={[Function]}
+  />
+  <Route
+    exact={true}
+    path="/movies/favorite-characters"
     render={[Function]}
   />
 </main>
