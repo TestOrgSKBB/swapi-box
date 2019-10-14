@@ -59,7 +59,7 @@ exports[`Form should match the snapshot 1`] = `
     >
       <button
         className="form__button"
-        onClick={[Function]}
+        disabled={true}
       >
         Submit
       </button>

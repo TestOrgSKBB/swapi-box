@@ -24,6 +24,7 @@ describe('Form', () => {
 
   describe('submitUserInfo', () => {
     it('should call updateState', () => {
+      wrapper.setState({ isComplete: true});
       wrapper.find('button').simulate('click');
       expect(mockUpdateState).toHaveBeenCalled();
     });
