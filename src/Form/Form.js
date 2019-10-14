@@ -35,7 +35,6 @@ export default class Form extends Component {
   }
 
   render() {
-
     return(
       <div id="form__div--container">
       <form>

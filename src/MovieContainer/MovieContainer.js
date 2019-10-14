@@ -7,7 +7,7 @@ const MovieContainer = ( props ) => {
   $('.title').text('Movies')
   
   const displayMovies = props.movies.map( movie => {
-
+    console.log(props.movies)
     const {title , episode_id, release_date, characters, opening_crawl } = movie;
     const selectMovie = props.selectMovie;
     return <MovieCard 
@@ -21,6 +21,7 @@ const MovieContainer = ( props ) => {
       opening_crawl={opening_crawl} 
     />
   });
+
 
   return (
     <section className="section__movie--container">
