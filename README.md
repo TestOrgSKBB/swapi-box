@@ -1,7 +1,7 @@
 
 # Swapi-Trivia
 
-View the live page [here.]()
+View the live page [here.](https://bradybridges.github.io/swapi-box/#/)
 
 ## Table of contents
 * [Objective](#Objective)
