@@ -1,6 +1,6 @@
 {
   "name": "swapi-trivia",
-  "homepage": "https://bradybridges.github.io/swapi-box/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
