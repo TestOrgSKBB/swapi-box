@@ -1,7 +1,5 @@
 import React from 'react';
 import FavoriteCharactersContainer from './FavoriteCharactersContainer';
-import CharacterCard from '../CharacterCard/CharacterCard';
-
 import { shallow } from 'enzyme';
 
 describe('FavoriteCharactersContainer', () => {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import CharacterCard from './CharacterCard';
-import { isTSAnyKeyword, exportAllDeclaration } from '@babel/types';
 
 describe('CharacterCard', () => {
   let wrapper;

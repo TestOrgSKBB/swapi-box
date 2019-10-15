@@ -4,7 +4,6 @@ import App from './App';
 
 describe('App', () => {
   let wrapper;
-  const mockSignOut = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(<App />);
@@ -76,12 +75,6 @@ describe('App', () => {
       expect(wrapper.state('name')).toEqual("");
       expect(wrapper.state('quote')).toEqual("");
       expect(wrapper.state('rank')).toEqual("");
-    });
-  });
-
-  describe('componentDidMount', () => {
-    it('should update state with returned movies', () => {
-      
     });
   });
 });
