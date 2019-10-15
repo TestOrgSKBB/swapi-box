@@ -12,13 +12,6 @@ $red-font: #963025;
   height: 57vh;
   text-align: center;
   position: relative;
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: transform .1s ease-in-out;
-}
-
-.character__cards:hover {
-  -webkit-transform: rotate(2deg);
-  transform: rotate(2deg);
 }
 
 .character__card--element {
@@ -54,12 +47,11 @@ $red-font: #963025;
   margin-top: 2.4%;
   margin-left: 2%;
   -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition:         transform .3s ease-in-out;
+  transition: transform .2s ease-in-out;
 }
 
 .article__favorite-button:hover {
   cursor:pointer;
-  // max-width: 12%;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -webkit-transform: rotate(70deg);
+  transform: rotate(70deg);
 }

@@ -21,7 +21,6 @@ h1 {
 
 body {
   background-image: 
-  // url('../images/jets.gif');
   url('../images/stars.gif');
     background-size: cover;
 }
@@ -38,13 +37,11 @@ body {
   position: absolute;
   margin-top: 1%;
   font-size: 3em;
-
 }
 
 .user-info {
 margin-top:3%;
 font-size: .8em;
-
 }
 
 .button__sign-out {
@@ -72,28 +69,6 @@ font-size: .8em;
   display: flex;
   justify-content: space-around;
   width: 100%;
-}
-
-.title:hover {
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-name: floating;
-  animation-timing-function: ease-in-out;
-}
-
-
-@keyframes floating {
-  from {
-    transform: translate(0, 0px);
-  }
-
-  65% {
-    transform: translate(0, 15px);
-  }
-
-  to {
-    transform: translate(0, -0px);
-  }
 }
 
 @keyframes neon4 {
