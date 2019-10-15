@@ -3,6 +3,7 @@ import CharacterCard from '../CharacterCard/CharacterCard';
 import PropTypes from 'prop-types';
 import './FavoriteCharactersContainer.scss';
 
+
 class FavoriteCharactersContainer extends Component {
 
   displayFavoriteCharacters = () => {
@@ -14,7 +15,6 @@ class FavoriteCharactersContainer extends Component {
       />)
   };
 
-
   render() {
     const favoriteCharacters = this.displayFavoriteCharacters();
     const hasFavChars = favoriteCharacters.length > 0;
@@ -25,7 +25,12 @@ class FavoriteCharactersContainer extends Component {
         {display}
       </section>
     );
-  }
-}
+  };
+};
+
+FavoriteCharactersContainer.propTypes = {
+  characters: PropTypes.array,
+  updateFavorite: PropTypes.func
+};
 
 export default FavoriteCharactersContainer;

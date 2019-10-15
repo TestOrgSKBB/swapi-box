@@ -1,6 +1,7 @@
 import React from 'react';
 import './MovieCard.scss';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const MovieCard = (props) => {
   const { title, release_date, id, episode_id, selectMovie } = props;
@@ -20,7 +21,17 @@ const MovieCard = (props) => {
       </NavLink>
     </section>
   );
-}
+};
+
+MovieCard.propTypes = {
+  characters: PropTypes.array,
+  episode_id: PropTypes.number,
+  id: PropTypes.number,
+  opening_crawl: PropTypes.string,
+  release_date: PropTypes.string,
+  selectMovie: PropTypes.func,
+  title: PropTypes.string
+};
 
 
 export default MovieCard

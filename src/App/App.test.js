@@ -4,6 +4,7 @@ import App from './App';
 
 describe('App', () => {
   let wrapper;
+  const mockSignOut = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(<App />);
@@ -29,7 +30,6 @@ describe('App', () => {
   expect(wrapper).toMatchSnapshot();
   });
 
-  describe('updateState', () => {
     it('should update the state', () => {
       wrapper.instance().updateState(
         {
@@ -41,7 +41,6 @@ describe('App', () => {
       expect(wrapper.state('quote')).toEqual('hello');
       expect(wrapper.state('rank')).toEqual('master');
     });
-  });
 
   describe('selectMovie', () => {
     it('should update state with current episode_id being viewed', () => {

@@ -33,11 +33,6 @@ describe('CharacterContainer', () => {
  beforeEach(() => {
    wrapper = shallow(<CharacterContainer
     characters={characters}
-    user={{
-      name: 'Dog',
-      quote: 'Bark',
-      ranking: 'Pretty good'
-    }}
   />);
  });
 

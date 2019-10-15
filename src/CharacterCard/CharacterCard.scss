@@ -43,14 +43,13 @@ $red-font: #963025;
 .article__favorite-button {
   width: 40px;
   -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition:         transform .3s ease-in-out;
+  transition: transform .2s ease-in-out;
 }
 
 .article__favorite-button:hover {
   cursor:pointer;
-  // max-width: 12%;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -webkit-transform: rotate(70deg);
+  transform: rotate(70deg);
 }
 
 .favorite-button-container {

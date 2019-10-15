@@ -7,7 +7,13 @@ import PropTypes from 'prop-types';
 
 const CharacterContainer = ( props ) => {
   $('.title').text('Characters');
-  const displayCharacters = props.characters.slice(0, 10).map((character, i) => <CharacterCard character={character} updateFavorite={props.updateFavorite} key={i} />);
+  const displayCharacters = props.characters.slice(0, 10).map((character, i) => 
+    <CharacterCard 
+      character={character} 
+      updateFavorite={props.updateFavorite} 
+      key={i} 
+    />);
+
   const opening_crawl = props.opening_crawl;
 
   return (
@@ -26,5 +32,16 @@ const CharacterContainer = ( props ) => {
     </>
   );
  }; 
+
+CharacterContainer.propTypes = {
+  characters: PropTypes.array,
+  numFavorites: PropTypes.number,
+  opening_crawl: PropTypes.string,
+  updateFavorite: PropTypes.func,
+  name: PropTypes.string,
+  species: PropTypes.string,
+  homeworld: PropTypes.string,
+  handleFavorite: PropTypes.func
+ };
 
 export default CharacterContainer;

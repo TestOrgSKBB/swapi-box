@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 import $ from 'jquery';
-import './Form.scss'
+import './Form.scss';
+import PropTypes from 'prop-types';
 
-export default class Form extends Component {
+class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,15 +25,15 @@ export default class Form extends Component {
       this.setState({ isComplete: true })
     } else {
       this.setState({ isComplete: false })
-    }
-  }
+    };
+  };
 
   submitUserInfo = () => {
     const name = `Name: ${$('#form__first-name').val()}`;
     const quote = `Quote: ${$('#form__fav-quote').val()}`;
     const rank = `Rank: ${$('select').val()}`;
     this.props.updateState({name, quote, rank});
-  }
+  };
 
   render() {
     return(
@@ -77,3 +78,11 @@ export default class Form extends Component {
     )
   };
 };
+
+Form.propTypes = {
+  movies: PropTypes.array,
+  handleChange: PropTypes.func,
+  submitUserInfo: PropTypes.func
+};
+
+export default Form;

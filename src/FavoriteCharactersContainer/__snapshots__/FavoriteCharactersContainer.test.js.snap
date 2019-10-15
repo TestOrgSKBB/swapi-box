@@ -1,30 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FavoriteCharactersContainer should match the snapshot 1`] = `
+exports[`FavoriteCharactersContainer should match the snapshot with the correct data 1`] = `
 <section
   id="favorite-characters"
 >
   <Character
     character={
       Object {
-        "homeplanet": "mars",
-        "isFavorited": true,
-        "name": "Obi",
+        "films": Array [
+          "A Film",
+          "Another Film",
+          "And another",
+        ],
+        "homeworld": "Earth",
+        "name": "A name",
+        "population": "2000",
+        "species": "human",
       }
     }
     key="0"
     updateFavorite={[MockFunction]}
   />
-  <Character
-    character={
-      Object {
-        "homeplanet": "earth",
-        "isFavorited": true,
-        "name": "Yoda",
-      }
-    }
-    key="1"
-    updateFavorite={[MockFunction]}
-  />
+</section>
+`;
+
+exports[`FavoriteCharactersContainer should match the snapshot with the correct data 2`] = `
+<section
+  id="favorite-characters"
+>
+  <h1>
+    No Favorite Characters
+  </h1>
 </section>
 `;
