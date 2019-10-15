@@ -48,3 +48,5 @@ npm install
 1. To verify that it is setup correctly, run `npm start` in your terminal. The page should open on your browser.
 
 ## Screenshots
+
+![](https://github.com/bradybridges/swapi-box/blob/master/src/images/app-test.gif)
