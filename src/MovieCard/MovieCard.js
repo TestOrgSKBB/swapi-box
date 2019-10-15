@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieCard.scss';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const MovieCard = (props) => {
@@ -10,7 +10,7 @@ const MovieCard = (props) => {
       <h2 className="movie__card--element movie__element--title">{title}</h2>
       <h3 className="movie__card--element">Episode {id}</h3>
       <h3 className="movie__card--element">{release_date}</h3>
-      <NavLink className="movie__button--link" to={`movies/${id}/characters`}>
+      <Link className="movie__button--link" to={`movies/${id}/characters`}>
         <button 
           className="button_view-characters" 
           value={props.episode} 
@@ -18,7 +18,7 @@ const MovieCard = (props) => {
         >
           View Characters
         </button>
-      </NavLink>
+      </Link>
     </section>
   );
 };

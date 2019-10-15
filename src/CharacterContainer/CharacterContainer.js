@@ -1,12 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import $ from 'jquery';
+import { Link } from 'react-router-dom';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import '../CharacterContainer/CharacterContainer.scss';
 import PropTypes from 'prop-types';
+import backImage from '../images/back.png'
 
 const CharacterContainer = ( props ) => {
-  $('.title').text('Characters');
+  // $('.title').text('Characters');
   const displayCharacters = props.characters.slice(0, 10).map((character, i) => 
     <CharacterCard 
       character={character} 
@@ -18,9 +18,13 @@ const CharacterContainer = ( props ) => {
 
   return (
     <>
-      <NavLink to='/movies/favorite-characters' >
+      <h1 className="character-title">Characters</h1>
+      <Link to='/movies'>
+        <img className="button__back" src={backImage} alt="back button"/>
+      </Link>
+      <Link to='/movies/favorite-characters' >
         <button className="button__view-favorites">View Favorites ({props.numFavorites})</button>
-      </NavLink>
+      </Link>
       <section className="section__characters">
         {displayCharacters}
         <div className="star-wars">

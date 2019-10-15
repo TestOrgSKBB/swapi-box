@@ -13,7 +13,7 @@ describe('CharacterCard', () => {
     homeworld: 'Earth',
     name: 'Pants',
     species: 'Dog',
-  }
+  };
 
   beforeEach(() => {
     wrapper = shallow(<CharacterCard

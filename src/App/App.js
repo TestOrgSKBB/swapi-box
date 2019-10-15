@@ -87,7 +87,7 @@ class App extends Component {
           <h1 className="user-info user-quote">{this.state.quote}</h1>
           <h1 className="user-info user-rank">{this.state.rank}</h1>
         </div>
-        <h1 className="title">Star Wars: Trivia</h1>
+        {/* <h1 className="title">Star Wars: Trivia</h1> */}
         <NavLink to='/'>    
           <button className="button__sign-out" onClick={this.signOut}>Sign Out</button>
         </NavLink>

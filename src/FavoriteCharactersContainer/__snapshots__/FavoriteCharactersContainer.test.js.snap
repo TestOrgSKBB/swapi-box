@@ -4,6 +4,20 @@ exports[`FavoriteCharactersContainer should match the snapshot with the correct 
 <section
   id="favorite-characters"
 >
+  <h1
+    className="fav_character-title"
+  >
+    Favorite Characters
+  </h1>
+  <Link
+    to="/movies"
+  >
+    <img
+      alt="back button"
+      className="button__back"
+      src="back.png"
+    />
+  </Link>
   <Character
     character={
       Object {
@@ -28,6 +42,20 @@ exports[`FavoriteCharactersContainer should match the snapshot with the correct 
 <section
   id="favorite-characters"
 >
+  <h1
+    className="fav_character-title"
+  >
+    Favorite Characters
+  </h1>
+  <Link
+    to="/movies"
+  >
+    <img
+      alt="back button"
+      className="button__back"
+      src="back.png"
+    />
+  </Link>
   <h1>
     No Favorite Characters
   </h1>

@@ -1,3 +1,9 @@
+$dark-grey: rgba(32, 37, 40, .8);
+$red-font: #963025;
+$sign-out-btn: rgba(55, 51, 62, 0.4);
+$sign-out-btn-hover: rgba(143, 171, 172, .7);
+$solid-light-grey: #919192;
+
 * {
   font-family: 'Barlow Condensed', sans-serif;
 }
@@ -29,11 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 1.5em;
-}
-
-.title {
-  color: #919192;
-  font-size: 3em;
+  margin-right: 47%;
 }
 
 .user-info {
@@ -42,11 +44,11 @@ font-size: .8em;
 }
 
 .button__sign-out {
-  background: rgba(55, 51, 62, 0.4);
+  background: $sign-out-btn;
   height: 5vh;
-  color: #919192;
+  color: $solid-light-grey;
   width: 236%;
-  border: 1px solid #919192;
+  border: 1px solid $solid-light-grey;
   border-radius: 30px;
   font-size: 1em;
   font-weight: bold;
@@ -54,9 +56,9 @@ font-size: .8em;
 }
 
 .button__sign-out:hover {
-  background: rgba(143, 171, 172, .7);
-  border:2px solid rgba(32, 37, 40, .8);
-  color: #963025;
+  background: $sign-out-btn-hover;
+  border:2px solid $dark-grey;
+  color: $red-font;
 }
 
 .main__div {

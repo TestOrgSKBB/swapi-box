@@ -2,7 +2,21 @@
 
 exports[`CharacterContainer should match the snapshot with the correct data 1`] = `
 <Fragment>
-  <NavLink
+  <h1
+    className="character-title"
+  >
+    Characters
+  </h1>
+  <Link
+    to="/movies"
+  >
+    <img
+      alt="back button"
+      className="button__back"
+      src="back.png"
+    />
+  </Link>
+  <Link
     to="/movies/favorite-characters"
   >
     <button
@@ -11,7 +25,7 @@ exports[`CharacterContainer should match the snapshot with the correct data 1`] 
       View Favorites (
       )
     </button>
-  </NavLink>
+  </Link>
   <section
     className="section__characters"
   >
