@@ -60,9 +60,9 @@ class Form extends Component {
           />
         <select className="form__element" name="rank" value={this.state.rank} onChange={this.handleChange}>
           <option defaultValue="rank">Rank</option>
-          <option name="rank" value="beginner">Beginner</option>
-          <option name="rank" value="intermediate">Intermediate</option>
-          <option name="rank" value="expert">Expert</option>
+          <option name="rank" value="Beginner">Beginner</option>
+          <option name="rank" value="Intermediate">Intermediate</option>
+          <option name="rank" value="Expert">Expert</option>
         </select>
         <Link className="form__button--link" to='/movies'>
           {!this.state.isComplete && <button 
