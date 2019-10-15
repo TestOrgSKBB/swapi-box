@@ -6,7 +6,6 @@ import activeFavoriteImg from '../images/active-favorite.png';
 class Character extends Component {
 
   toggleFavorited = () => {
-    console.log('toggle favorite prop', this.props)
     const { name } = this.props.character;
     this.props.updateFavorite(name);
   }

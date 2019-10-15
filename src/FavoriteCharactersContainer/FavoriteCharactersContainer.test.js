@@ -39,7 +39,6 @@ describe('FavoriteCharactersContainer', () => {
     it('should match the snapshot with the correct data', () => {
       expect(wrapperSad).toMatchSnapshot();
     })
-
-
+    
  });
 

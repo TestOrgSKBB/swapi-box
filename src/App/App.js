@@ -4,8 +4,6 @@ import './App.scss'
 import { Route, NavLink } from 'react-router-dom';
 import { fetchData } from '../apiCalls';
 import FavoriteCharactersContainer from '../FavoriteCharactersContainer/FavoriteCharactersContainer';
-
-
 import CharacterContainer from '../CharacterContainer/CharacterContainer'
 import MovieContainer from '../MovieContainer/MovieContainer'
 
@@ -30,7 +28,6 @@ export default class App extends Component {
     } else {
       fetchData()
         .then(data => {
-          console.log(data);
           return data;
         })
         .then(movies => {
