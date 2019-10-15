@@ -20,7 +20,7 @@ exports[`MovieCard should match the snapshot 1`] = `
   >
     2020/01/01
   </h3>
-  <NavLink
+  <Link
     className="movie__button--link"
     to="movies/undefined/characters"
   >
@@ -29,6 +29,6 @@ exports[`MovieCard should match the snapshot 1`] = `
     >
       View Characters
     </button>
-  </NavLink>
+  </Link>
 </section>
 `;

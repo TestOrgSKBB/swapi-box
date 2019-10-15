@@ -1,3 +1,9 @@
+$dark-grey: rgba(32, 37, 40, .8);
+$red-font: #963025;
+$sign-out-btn: rgba(55, 51, 62, 0.4);
+$sign-out-btn-hover: rgba(143, 171, 172, .7);
+$solid-light-grey: #919192;
+
 .section__movie--card {
   color: white;
   background: rgba(145, 145, 145, 0.7);
@@ -8,7 +14,7 @@
   text-align: center;
   position: relative;
   border-radius: 2em;
-  transition: transform .2s
+  transition: transform .2s;
 }
 
 .section__movie--card:hover {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import $ from 'jquery';
 import './Form.scss';
 import PropTypes from 'prop-types';
@@ -38,6 +38,7 @@ class Form extends Component {
   render() {
     return(
       <div id="form__div--container">
+      <h1 className="form-title">Star Wars: Trivia</h1>
       <form>
         <input
           id="form__first-name" 
@@ -59,11 +60,11 @@ class Form extends Component {
           />
         <select className="form__element" name="rank" value={this.state.rank} onChange={this.handleChange}>
           <option defaultValue="rank">Rank</option>
-          <option name="rank" value="beginner">Beginner</option>
-          <option name="rank" value="intermediate">Intermediate</option>
-          <option name="rank" value="expert">Expert</option>
+          <option name="rank" value="Beginner">Beginner</option>
+          <option name="rank" value="Intermediate">Intermediate</option>
+          <option name="rank" value="Expert">Expert</option>
         </select>
-        <NavLink className="form__button--link" to='/movies'>
+        <Link className="form__button--link" to='/movies'>
           {!this.state.isComplete && <button 
             className="form__button" 
             disabled  
@@ -72,7 +73,7 @@ class Form extends Component {
             className="form__button"
             onClick={this.submitUserInfo}
           >Submit</button>}
-        </NavLink>
+        </Link>
       </form>
       </div>
     )
