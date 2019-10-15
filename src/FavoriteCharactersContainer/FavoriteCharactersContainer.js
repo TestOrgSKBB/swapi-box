@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import CharacterCard from '../CharacterCard/CharacterCard';
+import PropTypes from 'prop-types';
 
 class FavoriteCharactersContainer extends Component {
 
   displayFavoriteCharacters = () => {
+    console.log('PROP TYPES', this.props)
     return this.props.characters.map( (character, i) => 
       <CharacterCard 
         character={character} 
         updateFavorite={this.props.updateFavorite} 
         key={i} 
       />)
-  }
+  };
 
   render() {
     const favoriteCharacters = this.displayFavoriteCharacters();
@@ -22,7 +24,12 @@ class FavoriteCharactersContainer extends Component {
         {display}
       </>
     );
-  }
-}
+  };
+};
+
+FavoriteCharactersContainer.propTypes = {
+  characters: PropTypes.array,
+  updateFavorite: PropTypes.func
+};
 
 export default FavoriteCharactersContainer;

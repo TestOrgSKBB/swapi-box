@@ -47,7 +47,7 @@ class App extends Component {
   selectMovie = e => {
     const episode_id = e.target.closest('section').id;
     this.setState({ currentMovie: episode_id });;
-  }
+  };
 
   updateFavorite = name => {
     const movies = this.state.movies.map( movie => movie );
@@ -57,17 +57,17 @@ class App extends Component {
     character.isFavorited = !favorited;
     this.setState({ movies });
     localStorage.setItem('movies', JSON.stringify(movies));
-  }
+  };
 
   returnFavoriteCharacters = () => {
     const movie = this.state.movies.find(movie => movie.episode_id === Number(this.state.currentMovie));
     const favCharacters = movie.characters.filter(character => character.isFavorited);
     return favCharacters;
-  }
+  };
 
   signOut = () => {
     this.setState({ name: '', quote: '', rank: '' });
-  }
+  };
 
   render() {
     return (
@@ -110,13 +110,6 @@ class App extends Component {
 };
 
 App.propTypes = {
-
-}
-
-
-export default App;
-
-App.propTypes = {
   movies: PropTypes.array,
   isLoading: PropTypes.bool,
   name: PropTypes.string,
@@ -127,3 +120,6 @@ App.propTypes = {
   returnFavoriteCharacters: PropTypes.func,
   signOut: PropTypes.func,
 }
+
+export default App;
+

@@ -2,7 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import $ from 'jquery';
 import CharacterCard from '../CharacterCard/CharacterCard';
-import '../CharacterContainer/CharacterContainer.scss'
+import '../CharacterContainer/CharacterContainer.scss';
+import PropTypes from 'prop-types';
+import FavoriteCharactersContainer from '../FavoriteCharactersContainer/FavoriteCharactersContainer';
 
 const CharacterContainer = ( props ) => {
   $('.title').text('Characters');
@@ -29,5 +31,16 @@ const CharacterContainer = ( props ) => {
     </section>
   );
  }; 
+
+CharacterContainer.propTypes = {
+  characters: PropTypes.array,
+  numFavorites: PropTypes.number,
+  opening_crawl: PropTypes.string,
+  updateFavorite: PropTypes.func,
+  name: PropTypes.string,
+  species: PropTypes.string,
+  homeworld: PropTypes.string,
+  handleFavorite: PropTypes.func
+ };
 
 export default CharacterContainer;
