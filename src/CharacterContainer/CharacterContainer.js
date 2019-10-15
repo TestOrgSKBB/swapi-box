@@ -6,7 +6,7 @@ import '../CharacterContainer/CharacterContainer.scss';
 import PropTypes from 'prop-types';
 
 const CharacterContainer = ( props ) => {
-  $('.title').text('Characters');
+  // $('.title').text('Characters');
   const displayCharacters = props.characters.slice(0, 10).map((character, i) => 
     <CharacterCard 
       character={character} 
@@ -18,6 +18,7 @@ const CharacterContainer = ( props ) => {
 
   return (
     <>
+      <h1 className="character-title">Characters</h1>
       <NavLink to='/movies/favorite-characters' >
         <button className="button__view-favorites">View Favorites ({props.numFavorites})</button>
       </NavLink>

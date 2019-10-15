@@ -22,6 +22,7 @@ class FavoriteCharactersContainer extends Component {
     
     return (
       <section id="favorite-characters">
+         <h1 className="fav_character-title">Favorite Characters</h1>
         {display}
       </section>
     );

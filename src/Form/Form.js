@@ -38,6 +38,7 @@ class Form extends Component {
   render() {
     return(
       <div id="form__div--container">
+      <h1 className="form-title">Star Wars: Trivia</h1>
       <form>
         <input
           id="form__first-name" 
