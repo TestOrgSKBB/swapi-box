@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import '../MovieContainer/MovieContainer.scss'
 import MovieCard from '../MovieCard/MovieCard';
 import PropTypes from 'prop-types';

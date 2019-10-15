@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import '../CharacterContainer/CharacterContainer.scss';
 import PropTypes from 'prop-types';
-import backImage from '../images/back.png'
+import backImage from '../../images/back.png'
 
 const CharacterContainer = ( props ) => {
   // $('.title').text('Characters');

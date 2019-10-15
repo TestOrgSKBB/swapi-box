@@ -41,19 +41,19 @@ exports[`Form should match the snapshot 1`] = `
       </option>
       <option
         name="rank"
-        value="beginner"
+        value="Beginner"
       >
         Beginner
       </option>
       <option
         name="rank"
-        value="intermediate"
+        value="Intermediate"
       >
         Intermediate
       </option>
       <option
         name="rank"
-        value="expert"
+        value="Expert"
       >
         Expert
       </option>
