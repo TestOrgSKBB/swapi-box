@@ -3,7 +3,7 @@ import CharacterCard from '../CharacterCard/CharacterCard';
 import PropTypes from 'prop-types';
 import './FavoriteCharactersContainer.scss';
 import { Link } from 'react-router-dom';
-import backImage from '../images/back.png';
+import backImage from '../../images/back.png';
 import './FavoriteCharactersContainer.scss'
 
 class FavoriteCharactersContainer extends Component {

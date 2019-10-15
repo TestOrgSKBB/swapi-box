@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './CharacterCard.scss'
-import favoriteImg from '../images/favorite.png';
-import activeFavoriteImg from '../images/active-favorite.png';
+import favoriteImg from '../../images/favorite.png';
+import activeFavoriteImg from '../../images/active-favorite.png';
 import PropTypes from 'prop-types';
 
 class Character extends Component {

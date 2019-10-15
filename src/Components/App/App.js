@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Form from '../Form/Form';
 import './App.scss'
 import { Route, NavLink } from 'react-router-dom';
-import { fetchData } from '../apiCalls';
+import { fetchData } from '../../apiCalls';
 import FavoriteCharactersContainer from '../FavoriteCharactersContainer/FavoriteCharactersContainer';
 import CharacterContainer from '../CharacterContainer/CharacterContainer'
 import MovieContainer from '../MovieContainer/MovieContainer';
