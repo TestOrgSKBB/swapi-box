@@ -78,5 +78,11 @@ describe('App', () => {
       expect(wrapper.state('rank')).toEqual("");
     });
   });
+
+  describe('componentDidMount', () => {
+    it('should update state with returned movies', () => {
+      
+    });
+  });
 });
 

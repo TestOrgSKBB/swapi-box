@@ -11,7 +11,7 @@ export const fetchData = () => {
     })
   }
 
-const fetchCharacterData = (characters) => {
+export const fetchCharacterData = (characters) => {
   const charactersData = characters.map(character => {
     return fetch(character)
     .then(data => data.json())
@@ -34,7 +34,7 @@ const fetchCharacterData = (characters) => {
   return Promise.all(charactersData);
 }
 
-const fetchMovies = (filmUrls) => {
+export const fetchMovies = (filmUrls) => {
   const movieData = filmUrls.map(film => {
     return fetch(film)
       .then(res => res.json())
@@ -43,7 +43,7 @@ const fetchMovies = (filmUrls) => {
   return Promise.all(movieData);
 }
 
-const fetchHomeworld = (homeworld) => {
+export const fetchHomeworld = (homeworld) => {
   return fetch(homeworld)
     .then(res => res.json())
     .then(homeworld => {
@@ -52,7 +52,7 @@ const fetchHomeworld = (homeworld) => {
     })
 }
 
-const fetchSpecies = (species) => {
+export const fetchSpecies = (species) => {
     return fetch(species)
       .then(res => res.json())
       .then(species => {
