@@ -7,7 +7,9 @@ exports[`CharacterContainer should match the snapshot with the correct data 1`] 
   <NavLink
     to="/movies/favorite-characters"
   >
-    <button>
+    <button
+      className="button__view-favorites"
+    >
       View Favorites (
       )
     </button>

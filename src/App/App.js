@@ -4,8 +4,6 @@ import './App.scss'
 import { Route, NavLink } from 'react-router-dom';
 import { fetchData } from '../apiCalls';
 import FavoriteCharactersContainer from '../FavoriteCharactersContainer/FavoriteCharactersContainer';
-
-
 import CharacterContainer from '../CharacterContainer/CharacterContainer'
 import MovieContainer from '../MovieContainer/MovieContainer'
 
@@ -17,7 +15,7 @@ export default class App extends Component {
       isLoading: true,
       name: '',
       quote: '',
-      rank:'',
+      rank: '',
       currentMovie: null,
     }
   };
@@ -39,7 +37,6 @@ export default class App extends Component {
           localStorage.setItem('movies', stringyMovies);
         })
         .catch(error => console.log(error));
-        console.log('movie-->', this.state)
     }
     
   };
@@ -70,7 +67,7 @@ export default class App extends Component {
   }
 
   signOut = () => {
-    this.setState({name: '', quote: '', rank: ''});
+    this.setState({ name: '', quote: '', rank: '' });
   }
 
   render() {
@@ -80,7 +77,7 @@ export default class App extends Component {
           <h1 className="title">Star Wars: Trivia</h1>
         <div className="main__div--info">
           <h1 className="user-info user-name">{this.state.name}</h1>
-          <h1 className="user-info user-quote">" {this.state.quote} "</h1>
+          <h1 className="user-info user-quote">{this.state.quote}</h1>
           <h1 className="user-info user-rank">{this.state.rank}</h1>
         </div>
         <NavLink to='/'>    
