@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import $ from 'jquery';
 import './Form.scss';
 import PropTypes from 'prop-types';
@@ -64,7 +64,7 @@ class Form extends Component {
           <option name="rank" value="intermediate">Intermediate</option>
           <option name="rank" value="expert">Expert</option>
         </select>
-        <NavLink className="form__button--link" to='/movies'>
+        <Link className="form__button--link" to='/movies'>
           {!this.state.isComplete && <button 
             className="form__button" 
             disabled  
@@ -73,7 +73,7 @@ class Form extends Component {
             className="form__button"
             onClick={this.submitUserInfo}
           >Submit</button>}
-        </NavLink>
+        </Link>
       </form>
       </div>
     )

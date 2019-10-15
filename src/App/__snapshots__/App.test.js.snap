@@ -24,11 +24,6 @@ exports[`App should match the snapshot 1`] = `
         master
       </h1>
     </div>
-    <h1
-      className="title"
-    >
-      Star Wars: Trivia
-    </h1>
     <NavLink
       to="/"
     >

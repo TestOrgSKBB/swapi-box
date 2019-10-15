@@ -1,9 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import $ from 'jquery';
+import { Link } from 'react-router-dom';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import '../CharacterContainer/CharacterContainer.scss';
 import PropTypes from 'prop-types';
+import backImage from '../images/back.png'
 
 const CharacterContainer = ( props ) => {
   // $('.title').text('Characters');
@@ -19,9 +19,12 @@ const CharacterContainer = ( props ) => {
   return (
     <>
       <h1 className="character-title">Characters</h1>
-      <NavLink to='/movies/favorite-characters' >
+      <Link to='/movies'>
+        <img className="button__back" src={backImage} alt="back button"/>
+      </Link>
+      <Link to='/movies/favorite-characters' >
         <button className="button__view-favorites">View Favorites ({props.numFavorites})</button>
-      </NavLink>
+      </Link>
       <section className="section__characters">
         {displayCharacters}
         <div className="star-wars">

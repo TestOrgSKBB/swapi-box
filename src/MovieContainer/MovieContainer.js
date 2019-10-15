@@ -5,7 +5,6 @@ import MovieCard from '../MovieCard/MovieCard';
 import PropTypes from 'prop-types';
 
 const MovieContainer = ( props ) => {
-  // $('.title').text('Movies')
   const sortedMovies = props.movies.sort((a,b) => a.episode_id - b.episode_id)
   const displayMovies = sortedMovies.map( movie => {
     const {title , episode_id, release_date, characters, opening_crawl } = movie;

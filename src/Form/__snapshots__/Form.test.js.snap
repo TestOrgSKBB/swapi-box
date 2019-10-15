@@ -4,6 +4,11 @@ exports[`Form should match the snapshot 1`] = `
 <div
   id="form__div--container"
 >
+  <h1
+    className="form-title"
+  >
+    Star Wars: Trivia
+  </h1>
   <form>
     <input
       className="form__element form__input"
@@ -53,7 +58,7 @@ exports[`Form should match the snapshot 1`] = `
         Expert
       </option>
     </select>
-    <NavLink
+    <Link
       className="form__button--link"
       to="/movies"
     >
@@ -63,7 +68,7 @@ exports[`Form should match the snapshot 1`] = `
       >
         Submit
       </button>
-    </NavLink>
+    </Link>
   </form>
 </div>
 `;

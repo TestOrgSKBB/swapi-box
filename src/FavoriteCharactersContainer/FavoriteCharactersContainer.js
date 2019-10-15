@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import PropTypes from 'prop-types';
 import './FavoriteCharactersContainer.scss';
-
+import { Link } from 'react-router-dom';
+import backImage from '../images/back.png';
+import './FavoriteCharactersContainer.scss'
 
 class FavoriteCharactersContainer extends Component {
 
@@ -23,6 +25,9 @@ class FavoriteCharactersContainer extends Component {
     return (
       <section id="favorite-characters">
          <h1 className="fav_character-title">Favorite Characters</h1>
+         <Link to='/movies'>
+          <img className="button__back" src={backImage} alt="back button"/>
+        </Link>
         {display}
       </section>
     );
