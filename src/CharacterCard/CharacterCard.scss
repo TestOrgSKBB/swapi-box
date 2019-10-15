@@ -12,13 +12,6 @@ $red-font: #963025;
   height: 57vh;
   text-align: center;
   position: relative;
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: transform .1s ease-in-out;
-}
-
-.character__cards:hover {
-  -webkit-transform: rotate(2deg);
-  transform: rotate(2deg);
 }
 
 .character__card--element {
@@ -48,11 +41,7 @@ $red-font: #963025;
 }
 
 .article__favorite-button {
-  position: absolute;
-  left: 0;
-  max-width: 9%;
-  margin-top: 2.4%;
-  margin-left: 2%;
+  width: 40px;
   -webkit-transition: -webkit-transform .8s ease-in-out;
   transition:         transform .3s ease-in-out;
 }
@@ -62,4 +51,8 @@ $red-font: #963025;
   // max-width: 12%;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.favorite-button-container {
+  background-color: white;
 }

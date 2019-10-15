@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CharacterContainer should match the snapshot with the correct data 1`] = `
-<section
-  className="section__characters"
->
+<Fragment>
   <NavLink
     to="/movies/favorite-characters"
   >
@@ -14,62 +12,66 @@ exports[`CharacterContainer should match the snapshot with the correct data 1`] 
       )
     </button>
   </NavLink>
-  <Character
-    character={
-      Object {
-        "films": Array [
-          "A Film",
-          "Another Film",
-          "And another",
-        ],
-        "homeworld": "Earth",
-        "name": "A name",
-        "population": "2000",
-        "species": "human",
-      }
-    }
-    key="0"
-  />
-  <Character
-    character={
-      Object {
-        "films": Array [
-          "A Film 2",
-          "Another Film 2",
-          "And another 2",
-        ],
-        "homeworld": "Earth 2",
-        "name": "A name 2",
-        "population": "2000 2",
-        "species": "human 2",
-      }
-    }
-    key="1"
-  />
-  <Character
-    character={
-      Object {
-        "films": Array [
-          "A Film 3",
-          "Another Film 3",
-          "And another 3",
-        ],
-        "homeworld": "Earth 3",
-        "name": "A name 3",
-        "population": "2000 3",
-        "species": "human 3",
-      }
-    }
-    key="2"
-  />
-  <div
-    className="star-wars"
+  <section
+    className="section__characters"
   >
+    <Character
+      character={
+        Object {
+          "films": Array [
+            "A Film",
+            "Another Film",
+            "And another",
+          ],
+          "homeworld": "Earth",
+          "name": "A name",
+          "population": "2000",
+          "species": "human",
+        }
+      }
+      key="0"
+    />
+    <Character
+      character={
+        Object {
+          "films": Array [
+            "A Film 2",
+            "Another Film 2",
+            "And another 2",
+          ],
+          "homeworld": "Earth 2",
+          "name": "A name 2",
+          "population": "2000 2",
+          "species": "human 2",
+        }
+      }
+      key="1"
+    />
+    <Character
+      character={
+        Object {
+          "films": Array [
+            "A Film 3",
+            "Another Film 3",
+            "And another 3",
+          ],
+          "homeworld": "Earth 3",
+          "name": "A name 3",
+          "population": "2000 3",
+          "species": "human 3",
+        }
+      }
+      key="2"
+    />
     <div
-      className="div__crawl"
+      className="star-wars"
     >
-      <p />
+      <div
+        className="div__crawl"
+      >
+        <p />
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</Fragment>
 `;

@@ -4,9 +4,7 @@
   justify-content: center;
   font-family: 'Pathway Gothic One', sans-serif;
   overflow: scroll;
-  height: 84vh;
-  border: 2px solid purple;
-  // margin-top: 10%;
+  height: 75vh;
 }
 
 .div__crawl {
@@ -45,16 +43,15 @@
 }
 
 .button__view-favorites {
-  position: absolute;
-  top: 12%;
-  left: 44%;
-  width: 12%;
-  height: 4vh;
+  background: rgba(55, 51, 62, 0.91);
   border-radius: 16em;
-  font-size: 1em;
-  background: rgba(55, 51, 62, 0.4);
-  color: #919192;
   border: 1px solid #919192;
+  color: #919192;
+  font-size: 1em;
+  height: 5vh;
+  justify-self: center;
+  margin-left: 25%;
+  width: 50%;
 }
 
 .button__view-favorites:hover {

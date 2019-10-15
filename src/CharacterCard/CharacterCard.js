@@ -20,16 +20,18 @@ class Character extends Component {
 
     return (
       <article className="character__cards">
+        <div className="favorite-button-container">
           { !isFavorited && <img 
           onClick={this.toggleFavorited} 
           className='article__favorite-button' 
           src={favoriteImg} 
           alt='favorite button' /> }
-        { isFavorited && <img 
+          { isFavorited && <img 
           onClick={this.toggleFavorited} 
           className='article__favorite-button' 
           src={activeFavoriteImg} 
           alt='favorite button' /> }
+        </div>
         <h5 className="character__card--element">Name: <span className="character__card--info">{name}</span></h5>
         <h5 className="character__card--element">HomeWorld: <span className="character__card--info">{homeworld[0]}</span></h5>
         <h6 className="character__card--element">Population: <span className="character__card--info">{homeworld[1]}</span></h6>
