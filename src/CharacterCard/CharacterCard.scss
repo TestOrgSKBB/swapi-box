@@ -41,11 +41,7 @@ $red-font: #963025;
 }
 
 .article__favorite-button {
-  position: absolute;
-  left: 0;
-  max-width: 9%;
-  margin-top: 2.4%;
-  margin-left: 2%;
+  width: 40px;
   -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: transform .2s ease-in-out;
 }
@@ -54,4 +50,8 @@ $red-font: #963025;
   cursor:pointer;
   -webkit-transform: rotate(70deg);
   transform: rotate(70deg);
+}
+
+.favorite-button-container {
+  background-color: white;
 }

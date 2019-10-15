@@ -4,12 +4,16 @@ exports[`CharacterCard should match the snapshot with all correct data 1`] = `
 <article
   className="character__cards"
 >
-  <img
-    alt="favorite button"
-    className="article__favorite-button"
-    onClick={[Function]}
-    src="favorite.png"
-  />
+  <div
+    className="favorite-button-container"
+  >
+    <img
+      alt="favorite button"
+      className="article__favorite-button"
+      onClick={[Function]}
+      src="favorite.png"
+    />
+  </div>
   <h5
     className="character__card--element"
   >

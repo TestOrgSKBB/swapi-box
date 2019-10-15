@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import PropTypes from 'prop-types';
+import './FavoriteCharactersContainer.scss';
+
 
 class FavoriteCharactersContainer extends Component {
 
   displayFavoriteCharacters = () => {
-    console.log('PROP TYPES', this.props)
     return this.props.characters.map( (character, i) => 
       <CharacterCard 
         character={character} 
@@ -20,9 +21,9 @@ class FavoriteCharactersContainer extends Component {
     const display = hasFavChars ? favoriteCharacters : <h1>No Favorite Characters</h1>;
     
     return (
-      <>
+      <section id="favorite-characters">
         {display}
-      </>
+      </section>
     );
   };
 };

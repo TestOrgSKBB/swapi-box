@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FavoriteCharactersContainer should match the snapshot with the correct data 1`] = `
-<Fragment>
+<section
+  id="favorite-characters"
+>
   <Character
     character={
       Object {
@@ -19,13 +21,15 @@ exports[`FavoriteCharactersContainer should match the snapshot with the correct 
     key="0"
     updateFavorite={[MockFunction]}
   />
-</Fragment>
+</section>
 `;
 
 exports[`FavoriteCharactersContainer should match the snapshot with the correct data 2`] = `
-<Fragment>
+<section
+  id="favorite-characters"
+>
   <h1>
     No Favorite Characters
   </h1>
-</Fragment>
+</section>
 `;

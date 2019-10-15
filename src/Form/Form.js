@@ -29,9 +29,9 @@ class Form extends Component {
   };
 
   submitUserInfo = () => {
-    const name = $('#form__first-name').val();
-    const quote = $('#form__fav-quote').val();
-    const rank = $('select').val();
+    const name = `Name: ${$('#form__first-name').val()}`;
+    const quote = `Quote: ${$('#form__fav-quote').val()}`;
+    const rank = `Rank: ${$('select').val()}`;
     this.props.updateState({name, quote, rank});
   };
 
