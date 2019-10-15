@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { fetchSpecies, fetchHomeworld, fetchCharacterData, fetchMovies } from './apiCalls';
 
+
 describe('apiCalls', () => {
   describe('fetchSpecies', () => {
     beforeEach(() => {
@@ -74,7 +75,6 @@ describe('apiCalls', () => {
     });
 
     it('should be called with the correct urls', () => {
-        fetchMovies = jest.fn();
        const mockCharacterUrls = ['char1', 'char2', 'char3'];
       fetchCharacterData(mockCharacterUrls);
       expect(window.fetch).toHaveBeenCalledWith('char1');
