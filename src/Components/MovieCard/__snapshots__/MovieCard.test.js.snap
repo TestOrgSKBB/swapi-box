@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard should match the snapshot 1`] = `
+<section
+  className="section__movie--card"
+  id={1}
+>
+  <h2
+    className="movie__card--element movie__element--title"
+  >
+    Star Wars: A New Hope
+  </h2>
+  <h3
+    className="movie__card--element"
+  >
+    Episode 
+  </h3>
+  <h3
+    className="movie__card--element"
+  >
+    2020/01/01
+  </h3>
+  <Link
+    className="movie__button--link"
+    to="movies/undefined/characters"
+  >
+    <button
+      className="button_view-characters"
+    >
+      View Characters
+    </button>
+  </Link>
+</section>
+`;

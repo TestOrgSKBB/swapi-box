@@ -1,0 +1,89 @@
+$dark-grey: rgba(32, 37, 40, .8);
+$red-font: #963025;
+$sign-out-btn: rgba(55, 51, 62, 0.4);
+$sign-out-btn-hover: rgba(143, 171, 172, .7);
+$solid-light-grey: #919192;
+
+* {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+main {
+background-image: 
+url('../../images/star-wars-planets.jpg');
+background-size: cover; 
+overflow: scroll;
+height: 100vh;
+opacity: .7;
+position: fixed;
+width: 100%
+}
+
+h1 {
+  color: #BFCAC3;
+  text-align: center;
+  margin-top: 2%;
+}
+
+body {
+  background-image: 
+  url('../../images/stars.gif');
+    background-size: cover;
+}
+
+.main__div--info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  margin-right: 47%;
+}
+
+.user-info {
+margin-top:3%;
+font-size: .8em;
+}
+
+.button__sign-out {
+  background: $sign-out-btn;
+  height: 5vh;
+  color: $solid-light-grey;
+  width: 236%;
+  border: 1px solid $solid-light-grey;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button__sign-out:hover {
+  background: $sign-out-btn-hover;
+  border:2px solid $dark-grey;
+  color: $red-font;
+}
+
+.main__div {
+  align-items: center;
+  height: 20vh;
+  background: rgba(51, 51, 51, .7);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+@keyframes neon4 {
+  from {
+    box-shadow: 0 0 0px #B6FF00, 0 0 10px #B6FF00, 0 0 30px #fff, 0 0 30px #B6FF00, 0 0 40px #B6FF00, 0 0 60px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00;
+  }
+  to {
+    box-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 5px #fff, 0 0 20px rgb(255, 44, 44), 0 0 40px rgb(255, 44, 44), 0 0 40px rgb(255, 44, 44), 0 0 60px rgb(255, 44, 44), 0 0 80px rgb(255, 44, 44);
+  }
+}
+
+form {
+  -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon4 1.5s ease-in-out infinite alternate;
+  animation: neon4 1.5s ease-in-out infinite alternate;
+  border-radius: 20px;
+}
+
+

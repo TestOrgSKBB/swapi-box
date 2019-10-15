@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterCard should match the snapshot with all correct data 1`] = `
+<article
+  className="character__cards"
+>
+  <div
+    className="favorite-button-container"
+  >
+    <img
+      alt="favorite button"
+      className="article__favorite-button"
+      onClick={[Function]}
+      src="favorite.png"
+    />
+  </div>
+  <h5
+    className="character__card--element"
+  >
+    Name: 
+    <span
+      className="character__card--info"
+    >
+      Pants
+    </span>
+  </h5>
+  <h5
+    className="character__card--element"
+  >
+    HomeWorld: 
+    <span
+      className="character__card--info"
+    >
+      E
+    </span>
+  </h5>
+  <h6
+    className="character__card--element"
+  >
+    Population: 
+    <span
+      className="character__card--info"
+    >
+      a
+    </span>
+  </h6>
+  <h5
+    className="character__card--element"
+  >
+    Species: 
+    <span
+      className="character__card--info"
+    >
+      Dog
+    </span>
+  </h5>
+  <div>
+    <h6
+      className="character__card--element"
+    >
+      Featured Films:
+    </h6>
+    <div
+      className="character__card--div"
+    >
+      <p
+        className="character__card--films"
+        key="0"
+      />
+      <p
+        className="character__card--films"
+        key="1"
+      />
+    </div>
+  </div>
+</article>
+`;

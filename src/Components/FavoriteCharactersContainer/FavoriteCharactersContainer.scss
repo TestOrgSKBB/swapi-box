@@ -1,0 +1,29 @@
+#favorite-characters {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vh;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.fav_character-title {
+  color: #919192;
+  font-size: 3em;
+  position: absolute;
+  top: 0;
+}
+
+.button__back {
+  max-width: 4%;
+  display: inline;
+  position: absolute;
+  top: 12%;
+  left: 1%;
+  transition: transform .2s;
+}
+
+.button__back:hover {
+  transform: scale(1.1); 
+  border: 1px solid #BFCAC3;
+  border-radius: 4em;
+}

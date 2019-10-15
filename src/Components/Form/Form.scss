@@ -1,0 +1,60 @@
+$dark-grey: rgba(32, 37, 40, .8);
+$card-background: rgba(145, 145, 145, 0.8);
+$element-background: rgba(51, 51, 51, .5);
+
+form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3em;
+}
+
+.form__element {
+  border-radius: 4px;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 8vh;
+  margin: 5% 5% 0% 5%;
+  opacity: .7;
+  padding-left: 7px;
+}
+
+#form__div--container {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 6%;
+}
+
+.form__button {
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: bold;
+  height: 8vh;
+  width: 90%;
+  color: $card-background;
+  &:hover {
+    background-color: $element-background;
+    color: white;
+  }
+}
+
+.form__button:disabled {
+  cursor: not-allowed;
+  background-color: white;
+  color: $card-background
+}
+
+.form__button--link {
+  margin: 5% 5% 5% 5%;
+  height: 8vh;
+  width: 100%;
+}
+
+.form-title {
+  color: #919192;
+  font-size: 3em;
+  position: absolute;
+  top: 0;
+  margin-left: 18%;
+}
+
