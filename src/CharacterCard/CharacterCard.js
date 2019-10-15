@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './CharacterCard.scss'
 import favoriteImg from '../images/favorite.png';
 import activeFavoriteImg from '../images/active-favorite.png';
+import PropTypes from 'prop-types';
 
 class Character extends Component {
 
@@ -45,4 +46,17 @@ class Character extends Component {
   };
 };
 
-export default Character
+Character.propTypes = {
+  character: PropTypes.object,
+  name: PropTypes.string,
+  homeworld: PropTypes.string,
+  species: PropTypes.string,
+  isFavorited: PropTypes.bool,
+  updateFavorite: PropTypes.func,
+  films: PropTypes.array,
+  toggleFavorited: PropTypes.func,
+  returnFilms: PropTypes.func
+}
+
+export default Character;
+

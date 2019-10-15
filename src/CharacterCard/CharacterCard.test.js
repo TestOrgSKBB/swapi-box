@@ -5,8 +5,8 @@ import { isTSAnyKeyword, exportAllDeclaration } from '@babel/types';
 
 describe('CharacterCard', () => {
   let wrapper;
-  let mockUpdateFavorite = jest.fn()
-  let mockToggleFavorited = jest.fn()
+  const mockUpdateFavorite = jest.fn()
+  const mockToggleFavorited = jest.fn()
   const films = ['Tv: The Movie', 'A Movie About Musicals'];
   const mockCharacter = {
     films,
@@ -20,12 +20,24 @@ describe('CharacterCard', () => {
       key={100}
       character={mockCharacter}
       updateFavorite={mockUpdateFavorite}
-      toggleFavorited={mockToggleFavorited}
       />)
   });
 
   it('should match the snapshot with all correct data', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+describe('toggleFavorites', () => {
+  it('should call updateFavorite', () => {
+    wrapper = mount(<CharacterCard
+      key={100}
+      updateFavorite = {mockUpdateFavorite}
+      toggleFavorited = {mockToggleFavorited}
+      character={mockCharacter}
+      />)
+      wrapper.find('.article__favorite-button').simulate('click');
+      expect(mockUpdateFavorite).toHaveBeenCalled()
+    });
   });
 
   describe('toggleFavorited', () => {
@@ -42,3 +54,4 @@ describe('CharacterCard', () => {
     })
   });
 });
+

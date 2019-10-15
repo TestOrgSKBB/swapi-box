@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import '../MovieContainer/MovieContainer.scss'
 import MovieCard from '../MovieCard/MovieCard';
+import PropTypes from 'prop-types';
 
 const MovieContainer = ( props ) => {
   $('.title').text('Movies')
@@ -21,13 +22,21 @@ const MovieContainer = ( props ) => {
     />
   });
 
-
   return (
     <section className="section__movie--container">
       {displayMovies}
     </section>
   )
- }  
-
+ };
+ 
+ MovieContainer.propTypes = {
+  movies: PropTypes.array,
+  selectMovie: PropTypes.func,
+  title: PropTypes.string,
+  episode_id: PropTypes.number,
+  release_date: PropTypes.string,
+  characters: PropTypes.array,
+  opening_crawl: PropTypes.string
+ };
 
 export default MovieContainer;
