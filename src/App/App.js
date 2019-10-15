@@ -5,9 +5,10 @@ import { Route, NavLink } from 'react-router-dom';
 import { fetchData } from '../apiCalls';
 import FavoriteCharactersContainer from '../FavoriteCharactersContainer/FavoriteCharactersContainer';
 import CharacterContainer from '../CharacterContainer/CharacterContainer'
-import MovieContainer from '../MovieContainer/MovieContainer'
+import MovieContainer from '../MovieContainer/MovieContainer';
+import PropTypes from 'prop-types';
 
-export default class App extends Component {
+class App extends Component {
   constructor() {
     super()
     this.state= {
@@ -37,7 +38,6 @@ export default class App extends Component {
         })
         .catch(error => console.log(error));
     }
-    
   };
 
   updateState = (statesObj) => {
@@ -109,6 +109,21 @@ export default class App extends Component {
   };
 };
 
+App.propTypes = {
+
+}
 
 
+export default App;
 
+App.propTypes = {
+  movies: PropTypes.array,
+  isLoading: PropTypes.bool,
+  name: PropTypes.string,
+  quote: PropTypes.string,
+  rank: PropTypes.string,
+  selectMovie: PropTypes.func,
+  updateFavorite: PropTypes.func,
+  returnFavoriteCharacters: PropTypes.func,
+  signOut: PropTypes.func,
+}
