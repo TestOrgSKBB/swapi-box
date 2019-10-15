@@ -5,10 +5,9 @@ import { shallow } from 'enzyme';
 import { isTSAnyKeyword, exportAllDeclaration } from '@babel/types';
 
 describe('CharacterContainer', () => {
-  let wrapper
- beforeEach(() => {
-   wrapper = shallow(<CharacterContainer
-    characters={[{
+  let wrapper;
+  const characters = [
+    {
       films:['A Film', 'Another Film', 'And another'],
       homeworld: 'Earth',
       name: 'A name',
@@ -28,11 +27,17 @@ describe('CharacterContainer', () => {
       name: 'A name 3',
       population: '2000 3',
       species:'human 3'
-    }]}
-  />)
+    }
+  ];
+
+ beforeEach(() => {
+   wrapper = shallow(<CharacterContainer
+    characters={characters}
+  />);
  });
 
  it('should match the snapshot with the correct data', () => {
    expect(wrapper).toMatchSnapshot();
- })
-})
+ });
+ 
+});

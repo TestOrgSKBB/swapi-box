@@ -31,7 +31,6 @@ describe('FavoriteCharactersContainer', () => {
     updateFavorite={mockUpdateFavorite}
      />)
   })
-
     it('should match the snapshot with the correct data', () => {
       expect(wrapperHappy).toMatchSnapshot();
     })
@@ -41,4 +40,5 @@ describe('FavoriteCharactersContainer', () => {
     })
     
  });
+
 

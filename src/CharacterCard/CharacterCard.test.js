@@ -7,11 +7,12 @@ describe('CharacterCard', () => {
   let wrapper;
   const mockUpdateFavorite = jest.fn()
   const mockToggleFavorited = jest.fn()
+  const films = ['Tv: The Movie', 'A Movie About Musicals'];
   const mockCharacter = {
-    films:['Tv: The Movie', 'A Movie About Musicals'],
+    films,
     homeworld: 'Earth',
     name: 'Pants',
-    species: 'Dog'
+    species: 'Dog',
   }
 
   beforeEach(() => {
@@ -36,6 +37,21 @@ describe('toggleFavorites', () => {
       />)
       wrapper.find('.article__favorite-button').simulate('click');
       expect(mockUpdateFavorite).toHaveBeenCalled()
+    });
+  });
+
+  describe('toggleFavorited', () => {
+    it('should toggle status of isFavorited when star icon is clicked', () => {
+      wrapper.find('img').simulate('click');
+      expect(mockUpdateFavorite).toHaveBeenCalledWith('Pants');
+    });
+  });
+
+  describe('returnFilms', () => {
+    it('should return the films a character is in, in a <p> tag.', () => {
+      const films = wrapper.instance().returnFilms();
+      expect(films.length).toEqual(2);
     })
-  })
-})
+  });
+});
+
