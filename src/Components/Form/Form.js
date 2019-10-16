@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import $ from 'jquery';
 import './Form.scss';
 import PropTypes from 'prop-types';
 
@@ -17,9 +16,10 @@ class Form extends Component {
 
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value})
-    const isNameGood = $('#form__first-name').val() !== '';
-    const isQuoteGood = $('#form__fav-quote').val() !== '';
-    const isRankGood = $('select').val() !== 'Rank';
+    const isNameGood = this.state.name !== '';
+    const isQuoteGood = this.state.quote !== '';
+    const isRankGood = this.state.rank !== 'Rank';
+
 
     if(isNameGood && isQuoteGood && isRankGood) {
       this.setState({ isComplete: true })
@@ -29,9 +29,9 @@ class Form extends Component {
   };
 
   submitUserInfo = () => {
-    const name = `Name: ${$('#form__first-name').val()}`;
-    const quote = `Quote: ${$('#form__fav-quote').val()}`;
-    const rank = `Rank: ${$('select').val()}`;
+    const name = `Name: ${this.state.name}`;
+    const quote = `Quote: ${this.state.quote}`;
+    const rank = `Rank: ${this.state.rank}`;
     this.props.updateState({name, quote, rank});
   };
 
